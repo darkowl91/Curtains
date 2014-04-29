@@ -2,6 +2,7 @@ package com.home.model.advertisement;
 
 import com.home.model.BaseEntity;
 import com.home.model.image.Picture;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Calendar;
@@ -12,6 +13,7 @@ public class News extends BaseEntity {
 
     @Column(name = "Date")
     @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private Calendar date;
 
     @Column(name = "Title", nullable = false)

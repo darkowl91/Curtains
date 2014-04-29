@@ -3,6 +3,7 @@ package com.home.model.contact;
 import com.home.model.BaseEntity;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Calendar;
@@ -22,6 +23,7 @@ public class Contact extends BaseEntity {
 
     @Column(name = "Date", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private Calendar date;
 
     @NotEmpty

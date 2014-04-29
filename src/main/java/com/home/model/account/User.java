@@ -5,6 +5,7 @@ import com.home.model.image.Picture;
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
@@ -48,6 +49,7 @@ public class User extends BaseEntity {
 
     @Column(name = "Birthday")
     @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private Calendar birthDay;
 
     @Column(name = "RegistrationDate")
