@@ -17,8 +17,8 @@ import java.util.List;
 public class User extends BaseEntity {
 
     @Column(name = "Username", nullable = false, unique = true)
-    @NotEmpty(message = "{com.wash.model.account.username.notEmpty}")
-    @Size(max = 255, message = "{com.wash.model.account.username.size}")
+    @NotEmpty(message = "{com.home.model.account.User.username.notEmpty}")
+    @Size(max = 255, message = "{com.home.model.account.User.username.size}")
     private String username;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -32,19 +32,19 @@ public class User extends BaseEntity {
     private boolean enabled;
 
     @Column(name = "Email", nullable = false, unique = true)
-    @Email(message = "{com.wash.model.account.email.incorrectEmail}")
-    @NotEmpty(message = "{com.wash.model.account.email.notEmpty}")
-    @Size(max = 255, message = "{com.wash.model.account.email.size}")
+    @Email(message = "{com.home.model.account.User.email.incorrectEmail}")
+    @NotEmpty(message = "{com.home.model.account.User.email.notEmpty}")
+    @Size(max = 255, message = "{com.home.model.account.User.email.size}")
     private String email;
 
     @Column(name = "FirstName", nullable = false)
-    @NotEmpty(message = "{com.wash.model.account.firstName.notEmpty}")
-    @Size(max = 255, message = "{com.wash.model.account.firstName.size}")
+    @NotEmpty(message = "{com.home.model.account.User.firstName.notEmpty}")
+    @Size(max = 255, message = "{com.home.model.account.User.firstName.size}")
     private String firstName;
 
     @Column(name = "LastName", nullable = false)
-    @NotEmpty(message = "{com.wash.model.account.lastName.notEmpty}")
-    @Size(max = 255, message = "{com.wash.model.account.lastName.size}")
+    @NotEmpty(message = "{com.home.model.account.User.lastName.notEmpty}")
+    @Size(max = 255, message = "{com.home.model.account.User.lastName.size}")
     private String lastName;
 
     @Column(name = "Birthday")
@@ -53,6 +53,7 @@ public class User extends BaseEntity {
     private Calendar birthDay;
 
     @Column(name = "RegistrationDate")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private Calendar registrationDate;
 
     @ManyToOne(fetch = FetchType.LAZY)

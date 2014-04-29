@@ -12,27 +12,27 @@ import javax.validation.constraints.Size;
 )
 public class RegistrationForm {
 
-    @NotEmpty(message = "{com.wash.model.account.registration.username.notEmpty}")
-    @Size(max = 255, message = "{com.wash.model.account.registration.username.size}")
+    @NotEmpty(message = "{com.home.model.account.registration.RegistrationForm.RegistrationForm.username.notEmpty}")
+    @Size(max = 255, message = "{com.home.model.account.registration.RegistrationForm.username.size}")
     private String username;
 
-    @NotEmpty(message = "{com.wash.model.account.registration.password.notEmpty}")
-    @Size(max = 255, message = "{com.wash.model.account.registration.password.size}")
+    @NotEmpty(message = "{com.home.model.account.registration.RegistrationForm.password.notEmpty}")
+    @Size(max = 255, message = "{com.home.model.account.registration.RegistrationForm.password.size}")
     private String password;
 
     private String passwordConfirm;
 
-    @NotEmpty(message = "{com.wash.model.account.registration.firstName.notEmpty}")
-    @Size(max = 255, message = "{com.wash.model.account.registration.firstName.size}")
+    @NotEmpty(message = "{com.home.model.account.registration.RegistrationForm.firstName.notEmpty}")
+    @Size(max = 255, message = "{com.home.model.account.registration.RegistrationForm.firstName.size}")
     private String firstName;
 
-    @NotEmpty(message = "{com.wash.model.account.registration.lastName.notEmpty}")
-    @Size(max = 255, message = "{com.wash.model.account.registration.lastName.size}")
+    @NotEmpty(message = "{com.home.model.account.registration.RegistrationForm.lastName.notEmpty}")
+    @Size(max = 255, message = "{com.home.model.account.registration.RegistrationForm.lastName.size}")
     private String lastName;
 
-    @Email(message = "{com.wash.model.account.registration.email.incorrectEmail}")
-    @NotEmpty(message = "{com.wash.model.account.registration.email.notEmpty}")
-    @Size(max = 255, message = "{com.wash.model.account.registration.email.size}")
+    @Email(message = "{com.home.model.account.registration.RegistrationForm.email.incorrectEmail}")
+    @NotEmpty(message = "{com.home.model.account.registration.RegistrationForm.email.notEmpty}")
+    @Size(max = 255, message = "{com.home.model.account.registration.RegistrationForm.email.size}")
     private String email;
 
     public String getUsername() {
