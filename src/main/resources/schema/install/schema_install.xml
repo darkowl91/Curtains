@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="1" author="Ilya_Kukushkin">
+        <createTable tableName="tblUser">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="BIRTHDAY" type="datetime"/>
+            <column name="EMAIL" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ENABLED" type="tinyint(1)"/>
+            <column name="FIRSTNAME" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LASTNAME" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PASSWORD" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REGISTRATION_DATE" type="timestamp"
+                    defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="USERNAME" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AUTHORITY_ID" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PICTURE_ID" type="bigint"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="USER"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="2" author="Ilya_Kukushkin">
+        <createTable tableName="AUTHORITY">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="NAME" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="AUTHORITY"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="3" author="Ilya_Kukushkin">
+        <createTable tableName="PHONE">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="OPERATOR" type="varchar(255)"/>
+            <column name="PHONE_VALUE" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="PHONE_TYPE" type="varchar(255)"/>
+            <column name="USER_ID" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="PHONE"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="4" author="Ilya_Kukushkin">
+        <createTable tableName="NEWS">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="DATE" type="timestamp" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="TITLE" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DECRIPTION" type="varchar(255)"/>
+            <column name="CONTENT" type="varchar(2048)"/>
+            <column name="PICTURE_ID" type="bigint"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="NEWS"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="5" author="Ilya_Kukushkin">
+        <createTable tableName="PICTURE">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="PICTURE_NAME" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PICTURE" type="mediumblob">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="PICTURE"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="6" author="Ilya_Kukushkin">
+        <createTable tableName="SERVICE">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="NAME" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DESCRIPTION" type="varchar(2048)"/>
+            <column name="PRICE" type="decimal(19,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WARRANTY" type="integer(1)"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="SERVICE"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="7" author="Ilya_Kukushkin">
+        <createTable tableName="SERVICE_REQUEST">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="DATE" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="APPROVED" type="tinyint(1)"/>
+            <column name="USER_ID" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SERVICE_ID" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="SERVICE_REQUEST"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="8" author="Ilya_Kukushkin">
+        <createTable tableName="CONTACT">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="NAME" type="varchar(25)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EMAIL" type="varchar(25)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MESSAGE" type="varchar(2048)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DATE" type="timestamp" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="CONTACT"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="9" author="Ilya_Kukushkin">
+        <sqlFile path="src/main/resources/schema/sql/install_data_1.sql"/>
+        <rollback>
+            <delete tableName="picture"/>
+            <delete tableName="user"/>
+            <delete tableName="authority"/>
+            <delete tableName="service"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet author="10" id="Ilya_Kukushkin">
+        <addUniqueConstraint columnNames="username" constraintName="uq_username" tableName="user"/>
+        <rollback>
+            <dropUniqueConstraint uniqueColumns="username" constraintName="uq_username" tableName="user"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet author="11" id="Ilya_Kukushkin">
+        <addUniqueConstraint columnNames="email" constraintName="uq_email" tableName="user"/>
+        <rollback>
+            <dropUniqueConstraint uniqueColumns="email" constraintName="uq_email" tableName="user"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

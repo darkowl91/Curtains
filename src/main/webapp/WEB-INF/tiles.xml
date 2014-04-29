@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+    <!-- BASE_LAYOUT -->
+    <definition name="curtains.mainLayout" template="/WEB-INF/pages/layouts/mainLayout.jsp">
+        <put-attribute name="header" value="/WEB-INF/pages/tiles/header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/pages/tiles/footer.jsp"/>
+        <!--<put-list-attribute name="page_specific_css">-->
+        <!--<add-attribute value="/resources/css/.css" type="string"/>-->
+        <!--</put-list-attribute>-->
+        <!--<put-list-attribute name="page_specific_js">-->
+        <!--<add-attribute value="/resources/js/.js" type="string"/>-->
+        <!--</put-list-attribute>    -->
+    </definition>
+    <!--ADMIN_LAYOUT-->
+    <definition name="curtains.adminLayout" template="/WEB-INF/pages/layouts/adminLayout.jsp">
+        <!--<put-attribute name="header" value="/WEB-INF/pages/tiles/header.jsp"/>-->
+        <!--<put-attribute name="footer" value="/WEB-INF/pages/tiles/footer.jsp"/>-->
+        <!--<put-list-attribute name="page_specific_css">-->
+        <!--<add-attribute value="/resources/css/.css" type="string"/>-->
+        <!--</put-list-attribute>-->
+        <!--<put-list-attribute name="page_specific_js">-->
+        <!--<add-attribute value="/resources/js/.js" type="string"/>-->
+        <!--</put-list-attribute>    -->
+    </definition>
+    <!--USER_LAYOUT-->
+    <definition name="curtains.userLayout" template="/WEB-INF/pages/layouts/userLayout.jsp">
+        <!--<put-attribute name="header" value="/WEB-INF/pages/tiles/header.jsp"/>-->
+        <!--<put-attribute name="footer" value="/WEB-INF/pages/tiles/footer.jsp"/>-->
+        <!--<put-list-attribute name="page_specific_css">-->
+        <!--<add-attribute value="/resources/css/.css" type="string"/>-->
+        <!--</put-list-attribute>-->
+        <!--<put-list-attribute name="page_specific_js">-->
+        <!--<add-attribute value="/resources/js/.js" type="string"/>-->
+        <!--</put-list-attribute>    -->
+    </definition>
+
+
+</tiles-definitions>
