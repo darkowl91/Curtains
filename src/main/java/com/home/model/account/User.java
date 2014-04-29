@@ -1,6 +1,7 @@
 package com.home.model.account;
 
 import com.home.model.BaseEntity;
+import com.home.model.account.phone.Phone;
 import com.home.model.image.Picture;
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.validator.constraints.Email;

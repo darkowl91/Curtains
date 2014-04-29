@@ -18,10 +18,10 @@ public abstract class BaseEntityServiceImpl<T extends BaseEntity, ID extends Lon
     @Autowired
     private IBaseEntityRepository<T, ID> repository;
 
-    private Class<T> tClass;
+    private Class<T> entityClass;
 
-    public final void setClass(Class<T> tClass) {
-        this.tClass = tClass;
+    public void setEntityClass(Class<T> entityClass) {
+        this.entityClass = entityClass;
     }
 
     @Override

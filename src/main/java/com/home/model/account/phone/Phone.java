@@ -1,21 +1,24 @@
-package com.home.model.account;
+package com.home.model.account.phone;
 
 import com.home.model.BaseEntity;
+import com.home.model.account.User;
 
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
 
 @Entity
 @Table(name = "tblPhone", schema = "Curtains")
 public class Phone extends BaseEntity {
 
     @Column(name = "Operator")
-    private String operator;
+    private Operator operator;
 
     @Column(name = "PhoneValue", nullable = false, unique = true)
+    @Pattern(regexp = "\\+375 \\(\\d{2}\\) \\d{3}(-\\d{2}){2}", message = "{com.home.model.account.phone.Phone.phoneValue.notMatchPattern}")
     private String phoneValue;
 
     @Column(name = "PhoneType")
-    private String type;
+    private Type type;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "UserId", nullable = false)
@@ -24,11 +27,11 @@ public class Phone extends BaseEntity {
     public Phone() {
     }
 
-    public String getOperator() {
+    public Operator getOperator() {
         return operator;
     }
 
-    public void setOperator(String operator) {
+    public void setOperator(Operator operator) {
         this.operator = operator;
     }
 
@@ -40,11 +43,11 @@ public class Phone extends BaseEntity {
         this.phoneValue = phoneValue;
     }
 
-    public String getType() {
+    public Type getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(Type type) {
         this.type = type;
     }
 
@@ -55,5 +58,4 @@ public class Phone extends BaseEntity {
     public void setUser(User user) {
         this.user = user;
     }
-
 }

@@ -2,20 +2,25 @@ package com.home.model.image;
 
 import com.home.model.BaseEntity;
 import com.home.programm.util.ImageUtil;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "tblPicture", schema = "Curtains")
 public class Picture extends BaseEntity {
 
     @Column(name = "PictureName", nullable = false)
+    @NotEmpty(message = "{com.home.model.image.Picture.pictureName.notEmpty}")
+    @Size(max = 255, message = "{com.home.model.image.Picture.pictureName.size}")
     private String pictureName;
 
     @Column(name = "Picture", columnDefinition = "mediumblob", nullable = false)
+    @NotEmpty(message = "{com.home.model.image.Picture.picture.notEmpty}")
     private byte[] picture;
 
     @Transient

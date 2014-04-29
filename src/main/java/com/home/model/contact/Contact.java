@@ -15,7 +15,7 @@ public class Contact extends BaseEntity {
 
     @Column(name = "Name", nullable = false)
     @NotEmpty(message = "{com.home.model.contact.Contact.name.notEmpty}")
-    @Size(max = 128, message = "{{com.home.model.contact.Contact.name.size}}")
+    @Size(max = 128, message = "{com.home.model.contact.Contact.name.size}")
     private String name;
 
     @Email(message = "{com.home.model.contact.Contact.email.incorrectEmail}")
