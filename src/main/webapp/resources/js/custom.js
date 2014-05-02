@@ -157,7 +157,7 @@ function changeBackgroundPattern() {
 	if(get_cookie1 == null){get_cookie1 = 'retina_wood'}
 	// backgrounds
 	$('head')
-	.append('<link rel="stylesheet" id="active-bg" href="css/backgrounds/'+get_cookie1+'.css">');
+	.append('<link rel="stylesheet" id="active-bg" href="/resources/css/backgrounds/'+get_cookie1+'.css">');
 
 	$(".switcher > .switcher-content > .pattern-switch").find('a').bind('click', function(e) {
 		$('#active-bg').remove();
@@ -165,7 +165,7 @@ function changeBackgroundPattern() {
 		var bgName = $(this).text();
 		$.cookie(cookie_name1, bgName, cookie_options1);
 		$('head')
-		.append('<link rel="stylesheet" id="active-bg" href="css/backgrounds/'+bgName+'.css">');
+		.append('<link rel="stylesheet" id="active-bg" href="/resources/css/backgrounds/'+bgName+'.css">');
 	});
 }
 
@@ -179,14 +179,14 @@ function changeLayoutStyle() {
 	if(get_cookie2 == null){get_cookie2 = 'Wide'}
 	//layout
 	$('head')
-	.append('<link rel="stylesheet" id="active-bg" href="css/layout/'+get_cookie2+'.css">');
+	.append('<link rel="stylesheet" id="active-bg" href="/resources/css/layout/'+get_cookie2+'.css">');
 	$(".switcher > .switcher-content > .layout-switch").find('a').bind('click', function(e){
 		$('#active-layout').remove();
 		e.preventDefault();
 		var layoutName = $(this).text();
 		$.cookie(cookie_name2, layoutName, cookie_options2);
 		$('head')
-		.append('<link rel="stylesheet" id="active-layout" href="css/layout/'+layoutName+'.css">');
+		.append('<link rel="stylesheet" id="active-layout" href="/resources/css/layout/'+layoutName+'.css">');
 
 	});
 }
@@ -201,14 +201,14 @@ function changeColorStyle() {
 	if(get_cookie3 == null){get_cookie3 = 'orange'}
 	//layout
 	$('head')
-	.append('<link rel="stylesheet" id="active-bg" href="css/color/'+get_cookie3+'.css">');
+	.append('<link rel="stylesheet" id="active-bg" href="/resources/css/color/'+get_cookie3+'.css">');
 	$(".switcher > .switcher-content > .color-switch").find('a').bind('click', function(e){
 		$('#active-color').remove();
 		e.preventDefault();
 		var colorName = $(this).text();
 		$.cookie(cookie_name3, colorName, cookie_options3);
 		$('head')
-		.append('<link rel="stylesheet" id="active-color" href="css/color/'+colorName+'.css">');
+		.append('<link rel="stylesheet" id="active-color" href="/resources/css/color/'+colorName+'.css">');
 
 	});
 }

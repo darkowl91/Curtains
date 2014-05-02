@@ -543,7 +543,7 @@ input[type="color"]:focus,
   text-align: center;
   vertical-align: middle;
   border:none;
-  background:url('../img/dottedBorder.png') repeat-x left bottom;
+  background:url('/resources/img/dottedBorder.png') repeat-x left bottom;
 }
 .table th {
   padding:8px 0;
@@ -597,13 +597,13 @@ input[type="color"]:focus,
   width:17px;
   height:17px;
   display: block;
-  background:url('../img/star-on.png') no-repeat left top;
+  background:url('/resources/img/star-on.png') no-repeat left top;
 }
 .table td.desc .rating i.star-off {
   width:17px;
   height:17px;
   display: block;
-  background:url('../img/star-off.png') no-repeat left top;
+  background:url('/resources/img/star-off.png') no-repeat left top;
 }
 /* quantity */
 .table td.quantity input {

@@ -78,7 +78,7 @@ html[xmlns] .slides {display: block;}
 	width: 30px; 
 	height: 30px; 
 	display: block; 
-	background: url(images/bg_direction_nav.png) no-repeat 0 0; 
+	background: url(//resources/images/bg_direction_nav.png) no-repeat 0 0;
 	position: absolute; 
 	top: 50%; 
 	z-index: 10; 
