@@ -42,6 +42,11 @@
     <link rel="apple-touch-icon" sizes="72x72" href="<c:url value="/resources/images/apple-touch-icon-72x72.html"/>">
     <link rel="apple-touch-icon" sizes="114x114"
           href="<c:url value="/resources/images/apple-touch-icon-114x114.html"/>">
+    <!-- Page Specific CSS -->
+    <tiles:useAttribute id="specific_css" name="page_specific_css" classname="java.util.List" ignore="true"/>
+    <c:forEach var="css_url" items="${specific_css}">
+        <link href="<c:url value="${css_url}"/>" rel="stylesheet" type="text/css" media="screen"/>
+    </c:forEach>
 </head>
 <body>
 <div id="mainContainer" class="clearfix">
@@ -81,5 +86,15 @@
 <script src="<c:url value="/resources/js/fancybox/jquery.fancybox.js"/>"></script>
 <!-- custom function-->
 <script src="<c:url value="/resources/js/custom.js"/>"></script>
+<%--notyfications--%>
+<script src="<c:url value="/resources/js/noty/packaged/jquery.noty.packaged.min.js"/>"></script>
+<%--validation--%>
+<script src="<c:url value="/resources/js/jquery-validate.min.js"/>"></script>
+<!-- Page Specific Scripts -->
+<tiles:useAttribute id="specific_js" name="page_specific_js" classname="java.util.List" ignore="true"/>
+<c:forEach var="js_url" items="${specific_js}">
+    <script type="text/javascript" src="<c:url value="${js_url}"/>"></script>
+</c:forEach>
+
 </body>
 </html>
