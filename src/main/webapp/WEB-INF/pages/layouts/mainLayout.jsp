@@ -33,7 +33,7 @@
     <c:url value="/resources/js/ie7.js" var="ie7"/>
     <!--[if lt IE 9]>
     <script src="${hyml5shim}"></script>
-    <script src="${ie7}}"></script>
+    <script src="${ie7}"></script>
     <![endif]-->
     <!-- Favicons
     ================================================== -->
@@ -44,7 +44,23 @@
           href="<c:url value="/resources/images/apple-touch-icon-114x114.html"/>">
 </head>
 <body>
-<tiles:insertAttribute name="content"/>
+<div id="mainContainer" class="clearfix">
+    <header>
+        <tiles:insertAttribute name="upperHeader"/>
+        <tiles:insertAttribute name="middleHeader"/>
+        <tiles:insertAttribute name="mainNav"/>
+    </header>
+
+    <div class="container">
+        <tiles:insertAttribute name="content_row1" ignore="true"/>
+        <tiles:insertAttribute name="content_row2" ignore="true"/>
+        <tiles:insertAttribute name="content_row3" ignore="true"/>
+    </div>
+
+    <tiles:insertAttribute name="footer"/>
+</div>
+
+<tiles:insertAttribute name="sideBar" ignore="true"/>
 
 <script src="<c:url value="/resources/js/jquery1.9.1.js"/>"></script>
 <script src="<c:url value="/resources/js/jquery_ui1.10.1.js"/>"></script>

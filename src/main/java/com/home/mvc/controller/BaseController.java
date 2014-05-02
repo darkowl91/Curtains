@@ -10,8 +10,7 @@ public class BaseController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public final String startPage(Model model) {
-        return "curtains.welcome";
+        return "curtains.signUp";
     }
-
 
 }

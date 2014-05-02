@@ -2,39 +2,32 @@
 <!DOCTYPE tiles-definitions PUBLIC
         "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
         "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
-
 <tiles-definitions>
     <!-- BASE_LAYOUT -->
-    <definition name="mainLayout" template="/WEB-INF/pages/layouts/base/mainLayout.jsp">
+    <definition name="curtains.mainLayout" template="/WEB-INF/pages/layouts/mainLayout.jsp">
         <put-attribute name="title" type="string" value="Curtains"/>
-    </definition>
-
-    <definition name="userLayout" extends="mainLayout">
-        <put-attribute name="content" value="mainLayoutUser"/>
-    </definition>
-
-    <definition name="adminLayout" extends="mainLayout">
-        <put-attribute name="content" value="mainLayoutAdmin"/>
-    </definition>
-    <!--=================================================================================-->
-    <!-- BASE_LAYOUT_USER-->
-    <definition name="mainLayoutUser" template="/WEB-INF/pages/layouts/userLayout.jsp">
         <put-attribute name="upperHeader" value="/WEB-INF/pages/tiles/user/upperHeader.jsp"/>
         <put-attribute name="middleHeader" value="/WEB-INF/pages/tiles/user/middleHeader.jsp"/>
         <put-attribute name="mainNav" value="/WEB-INF/pages/tiles/user/mainNav.jsp"/>
+        <put-attribute name="sideBar" value="/WEB-INF/pages/tiles/sideBar.jsp"/>
+    </definition>
+
+    <!-- WELCOME -->
+    <definition name="curtains.welcome" extends="curtains.mainLayout">
         <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/user/content_row1.jsp"/>
         <put-attribute name="content_row2" value="/WEB-INF/pages/tiles/user/content_row2.jsp"/>
         <put-attribute name="content_row3" value="/WEB-INF/pages/tiles/user/content_row3.jsp"/>
-        <put-attribute name="footer" value="/WEB-INF/pages/tiles/user/footer.jsp"/>
-        <put-attribute name="sideBar" value="/WEB-INF/pages/tiles/user/sideBar.jsp"/>
     </definition>
-    <!-- BASE_LAYOUT_ADMIN -->
-    <definition name="mainLayoutAdmin" template="/WEB-INF/pages/layouts/adminLayout.jsp">
 
+    <!--SIGN_IN-->
+    <definition name="curtains.signIn" extends="curtains.mainLayout">
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/signIn.jsp"/>
     </definition>
-    <!--=================================================================================-->
 
-    <definition name="curtains.welcome" extends="userLayout"/>
+    <!--SIGN_UP-->
+    <definition name="curtains.signUp" extends="curtains.mainLayout">
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/signUp.jsp"/>
+    </definition>
 
 
 </tiles-definitions>
