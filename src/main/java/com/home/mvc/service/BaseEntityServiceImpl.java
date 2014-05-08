@@ -13,16 +13,12 @@ import java.util.List;
 
 @Service
 @Transactional
-public abstract class BaseEntityServiceImpl<T extends BaseEntity, ID extends Long> implements IBaseEntityService<T, ID> {
+public abstract class BaseEntityServiceImpl<T extends BaseEntity,
+        ID extends Long,
+        T_REPOSITIRY extends IBaseEntityRepository<T, ID>> implements IBaseEntityService<T, ID, T_REPOSITIRY> {
 
     @Autowired
-    private IBaseEntityRepository<T, ID> repository;
-
-    private Class<T> entityClass;
-
-    public void setEntityClass(Class<T> entityClass) {
-        this.entityClass = entityClass;
-    }
+    protected T_REPOSITIRY repository;
 
     @Override
     public List<T> findAll() {

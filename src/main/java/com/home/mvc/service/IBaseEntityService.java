@@ -1,6 +1,7 @@
 package com.home.mvc.service;
 
 import com.home.model.BaseEntity;
+import com.home.repository.IBaseEntityRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -8,7 +9,7 @@ import org.springframework.data.domain.Sort;
 import java.io.Serializable;
 import java.util.List;
 
-public interface IBaseEntityService<T extends BaseEntity, ID extends Serializable> {
+public interface IBaseEntityService<T extends BaseEntity, ID extends Serializable, T_REPOSITIRY extends IBaseEntityRepository<T, ID>> {
 
     List<T> findAll();
 

@@ -21,7 +21,7 @@ public class Picture extends BaseEntity {
 
     @Column(name = "Picture", columnDefinition = "mediumblob", nullable = false)
     @NotEmpty(message = "{com.home.model.image.Picture.picture.notEmpty}")
-    @Size(max = 1024, message ="{com.home.model.image.Picture.picture.size}" )
+    @Size(max = 1024, message = "{com.home.model.image.Picture.picture.size}")
     private byte[] picture;
 
     @Transient
