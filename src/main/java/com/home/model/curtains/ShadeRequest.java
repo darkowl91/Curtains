@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.Calendar;
 
 @Entity
-@Table(name = "tblShadeRequest", schema = "Curtains")
+@Table(name = "ShadeRequest", schema = "Curtains")
 public class ShadeRequest extends BaseEntity {
 
     @Column(name = "Date", nullable = false)

@@ -14,7 +14,7 @@ import java.util.Calendar;
 import java.util.List;
 
 @Entity
-@Table(name = "tblUser", schema = "Curtains")
+@Table(name = "User", schema = "Curtains")
 public class User extends BaseEntity {
 
     @Column(name = "Username", nullable = false, unique = true)

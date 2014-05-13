@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 import java.util.Calendar;
 
 @Entity
-@Table(name = "tblContact", schema = "Curtains")
+@Table(name = "Contact", schema = "Curtains")
 public class Contact extends BaseEntity {
 
     @Column(name = "Name", nullable = false)

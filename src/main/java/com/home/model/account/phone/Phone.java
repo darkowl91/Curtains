@@ -7,7 +7,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Pattern;
 
 @Entity
-@Table(name = "tblPhone", schema = "Curtains")
+@Table(name = "Phone", schema = "Curtains")
 public class Phone extends BaseEntity {
 
     @Column(name = "Operator")

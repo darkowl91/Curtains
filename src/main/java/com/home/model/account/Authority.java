@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "tblAuthority", schema = "Curtains")
+@Table(name = "Authority", schema = "Curtains")
 public class Authority extends BaseEntity {
 
     @Column(name = "Name", nullable = false)

@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
-@Table(name = "tblShade", schema = "Curtains")
+@Table(name = "Shade", schema = "Curtains")
 public class Shade extends BaseEntity {
 
     @Column(name = "Price")

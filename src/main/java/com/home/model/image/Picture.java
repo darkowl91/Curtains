@@ -11,7 +11,7 @@ import javax.persistence.Transient;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "tblPicture", schema = "Curtains")
+@Table(name = "Picture", schema = "Curtains")
 public class Picture extends BaseEntity {
 
     @Column(name = "PictureName", nullable = false)
