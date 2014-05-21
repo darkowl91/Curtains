@@ -8,6 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -17,11 +18,12 @@ public class Picture extends BaseEntity {
     @Column(name = "PictureName", nullable = false)
     @NotEmpty(message = "{com.home.model.image.Picture.pictureName.notEmpty}")
     @Size(max = 255, message = "{com.home.model.image.Picture.pictureName.size}")
+    @Pattern(regexp="([^\\s]+(\\.(?i)(jpg|png|gif|bmp))$)")
     private String pictureName;
 
     @Column(name = "Picture", columnDefinition = "mediumblob", nullable = false)
     @NotEmpty(message = "{com.home.model.image.Picture.picture.notEmpty}")
-    @Size(max = 1024, message = "{com.home.model.image.Picture.picture.size}")
+    @Size(max = 1048576, message = "{com.home.model.image.Picture.picture.size}")
     private byte[] picture;
 
     @Transient

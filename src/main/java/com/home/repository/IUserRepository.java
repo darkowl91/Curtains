@@ -8,4 +8,6 @@ import com.home.model.account.User;
 public interface IUserRepository extends IBaseEntityRepository<User, Long> {
 
     User findByEmail(String email);
+
+    User findByUsername(String username);
 }
