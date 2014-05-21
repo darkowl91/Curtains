@@ -5,10 +5,8 @@ import org.apache.commons.lang.time.DateUtils;
 
 import java.beans.PropertyEditorSupport;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.TimeZone;
 
 public class DateEditor extends PropertyEditorSupport {
     public void setAsText(String value) {

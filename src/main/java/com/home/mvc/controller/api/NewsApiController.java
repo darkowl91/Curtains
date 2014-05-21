@@ -3,7 +3,7 @@ package com.home.mvc.controller.api;
 import com.google.common.collect.Lists;
 import com.home.model.advertisement.News;
 import com.home.mvc.service.IBaseEntityService;
-import com.home.repository.IBaseEntityRepository;
+import com.home.repository.INewsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -21,7 +21,7 @@ public class NewsApiController {
 
     @Qualifier("NewsService")
     @Autowired
-    private IBaseEntityService<News, Long, IBaseEntityRepository<News, Long>> newsService;
+    private IBaseEntityService<News, Long, INewsRepository> newsService;
 
     @RequestMapping(method = RequestMethod.POST)
     @ResponseBody

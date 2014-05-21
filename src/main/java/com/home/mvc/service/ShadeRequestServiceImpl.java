@@ -2,7 +2,7 @@ package com.home.mvc.service;
 
 import com.google.common.collect.Lists;
 import com.home.model.curtains.ShadeRequest;
-import com.home.repository.IShadeRequestReposirory;
+import com.home.repository.IShadeRequestRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,7 +11,7 @@ import java.util.List;
 
 @Service("ShadeRequestService")
 @Transactional
-public class ShadeRequestServiceImpl extends BaseEntityServiceImpl<ShadeRequest, Long, IShadeRequestReposirory> implements IShadeRequestService {
+public class ShadeRequestServiceImpl extends BaseEntityServiceImpl<ShadeRequest, Long, IShadeRequestRepository> implements IShadeRequestService {
 
     @Override
     public List<ShadeRequest> findApproved() {

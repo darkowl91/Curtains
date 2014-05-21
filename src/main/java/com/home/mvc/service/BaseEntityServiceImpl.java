@@ -1,7 +1,6 @@
 package com.home.mvc.service;
 
 import com.home.model.BaseEntity;
-import com.home.programm.exception.DuplicatePhoneException;
 import com.home.repository.IBaseEntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

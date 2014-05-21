@@ -2,7 +2,7 @@ package com.home.mvc.controller;
 
 import com.home.model.curtains.Shade;
 import com.home.mvc.service.IBaseEntityService;
-import com.home.repository.IBaseEntityRepository;
+import com.home.repository.IShadeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -16,7 +16,7 @@ public class ShadeController {
 
     @Qualifier("ShadeService")
     @Autowired
-    private IBaseEntityService<Shade, Long, IBaseEntityRepository<Shade, Long>> service;
+    private IBaseEntityService<Shade, Long, IShadeRepository> service;
 
     @RequestMapping(value = "/viewServiceList", method = RequestMethod.GET)
     public String viewServiceList(ModelMap model) {

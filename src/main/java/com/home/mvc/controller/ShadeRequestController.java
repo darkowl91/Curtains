@@ -5,7 +5,7 @@ import com.home.model.curtains.ShadeRequest;
 import com.home.mvc.service.IBaseEntityService;
 import com.home.mvc.service.IShadeRequestService;
 import com.home.mvc.service.IUserService;
-import com.home.repository.IBaseEntityRepository;
+import com.home.repository.IShadeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -28,7 +28,8 @@ public class ShadeRequestController {
 
     @Qualifier("ShadeService")
     @Autowired
-    private IBaseEntityService<Shade, Long, IBaseEntityRepository<Shade, Long>> shadeService;
+    private IBaseEntityService<Shade, Long, IShadeRepository> shadeService;
+
     @Autowired
     private IUserService userService;
 

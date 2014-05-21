@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class AboutController extends BaseController {
+public class AboutController {
 
     @RequestMapping(value = "/aboutUs", method = RequestMethod.GET)
     public final String aboutUs() {

@@ -18,7 +18,7 @@ public class Picture extends BaseEntity {
     @Column(name = "PictureName", nullable = false)
     @NotEmpty(message = "{com.home.model.image.Picture.pictureName.notEmpty}")
     @Size(max = 255, message = "{com.home.model.image.Picture.pictureName.size}")
-    @Pattern(regexp="([^\\s]+(\\.(?i)(jpg|png|gif|bmp))$)")
+    @Pattern(regexp = "([^\\s]+(\\.(?i)(jpg|png|gif|bmp))$)")
     private String pictureName;
 
     @Column(name = "Picture", columnDefinition = "mediumblob", nullable = false)
