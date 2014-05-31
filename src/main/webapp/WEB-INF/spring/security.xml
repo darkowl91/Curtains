@@ -28,12 +28,12 @@
                     data-source-ref="dataSource"
 
                     users-by-username-query="
-			      select u.username, u.password, u.enabled 
-			      from user u where u.username=?"
+			      select u.Username, u.Password, u.Enabled
+			      from User u where u.Username=?"
 
                     authorities-by-username-query="
-			      select u.username, a.name from user u, authority a 
-			      where u.authority_id = a.id and u.username=?"/>
+			      select u.Username, a.Name from User u, Authority a
+			      where u.AuthorityId = a.Id and u.Username=?"/>
         </security:authentication-provider>
     </security:authentication-manager>
 </beans>

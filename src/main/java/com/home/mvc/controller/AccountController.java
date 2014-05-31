@@ -57,13 +57,13 @@ public class AccountController {
             model.addAttribute("signInError", "true");
         }
 
-        return "carWash.signIn";
+        return "curtains.signIn";
     }
 
     @RequestMapping(value = "/signUp", method = RequestMethod.GET)
     public String signUpForm(Model model) {
         model.addAttribute("newUser", new RegistrationForm());
-        return "carWash.signUp";
+        return "curtains.signUp";
     }
 
     @RequestMapping(value = "/signUp", method = RequestMethod.POST)
@@ -72,7 +72,7 @@ public class AccountController {
             BindingResult result) {
 
         if (result.hasErrors()) {
-            return "carWash.signUp";
+            return "curtains.signUp";
         }
 
         User newUser = userConverter.convert(registrationForm);
@@ -82,7 +82,7 @@ public class AccountController {
         User registered = createUserAccount(newUser, result);
 
         if (registered == null) {
-            return "carWash.signUp";
+            return "curtains.signUp";
         }
         SecurityUtil.logInUser(registered);
 
@@ -94,7 +94,7 @@ public class AccountController {
         User user = userService.findByUsername(principal.getName());
         model.addAttribute("user", user);
         model.addAttribute("newPhone", new Phone());
-        return "carWash.selfCare";
+        return "curtains.selfCare";
     }
 
     @RequestMapping(value = "/selfCare", method = RequestMethod.POST)
@@ -104,14 +104,14 @@ public class AccountController {
 
         if (result.hasErrors()) {
             model.addAttribute("newPhone", new Phone());
-            return "carWash.selfCare";
+            return "curtains.selfCare";
         }
 
         user = userService.save(user);
 
         if (user == null) {
             model.addAttribute("newPhone", new Phone());
-            return "carWash.selfCare";
+            return "curtains.selfCare";
         }
 
         return "redirect:/selfCare";
@@ -123,7 +123,7 @@ public class AccountController {
 
         if (result.hasErrors()) {
             model.addAttribute("newPhone", new Phone());
-            return "carWash.selfCare";
+            return "curtains.selfCare";
         }
 
         userService.save(user);
@@ -136,7 +136,7 @@ public class AccountController {
                            Model model, Locale locale) {
 
         if (result.hasErrors()) {
-            return "carWash.selfCare";
+            return "curtains.selfCare";
         }
 
         newPhone.setUser(user);
@@ -144,7 +144,7 @@ public class AccountController {
 
         if (newPhone == null) {
             model.addAttribute("newPhone", new Phone());
-            return "carWash.selfCare";
+            return "curtains.selfCare";
         }
 
         return "redirect:/selfCare";

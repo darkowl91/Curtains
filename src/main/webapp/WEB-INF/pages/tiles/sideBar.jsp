@@ -2,6 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
+<%--SIDEBAR--%>
+
 <div class="switcher">
     <h3>Site Switcher</h3>
     <a class="Widget-toggle-link">+</a>

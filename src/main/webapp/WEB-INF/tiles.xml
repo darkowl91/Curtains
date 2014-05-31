@@ -10,13 +10,15 @@
         <put-attribute name="middleHeader" value="/WEB-INF/pages/tiles/user/middleHeader.jsp"/>
         <put-attribute name="mainNav" value="/WEB-INF/pages/tiles/user/mainNav.jsp"/>
         <put-attribute name="sideBar" value="/WEB-INF/pages/tiles/sideBar.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/pages/tiles/user/footer.jsp"/>
     </definition>
 
     <!-- WELCOME -->
     <definition name="curtains.welcome" extends="curtains.mainLayout">
-        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/user/content_row1.jsp"/>
-        <put-attribute name="content_row2" value="/WEB-INF/pages/tiles/user/content_row2.jsp"/>
-        <put-attribute name="content_row3" value="/WEB-INF/pages/tiles/user/content_row3.jsp"/>
+    <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/user/content_row1.jsp"/>
+    <put-attribute name="content_row2" value="/WEB-INF/pages/tiles/user/content_row2.jsp"/>
+    <put-attribute name="content_row3" value="/WEB-INF/pages/tiles/user/content_row3.jsp"/>
+
     </definition>
 
     <!--SIGN_IN-->
@@ -29,5 +31,54 @@
         <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/signUp.jsp"/>
     </definition>
 
+    <!--ABOUT US-->
+    <definition name="curtains.about" extends="curtains.mainLayout">
+
+    </definition>
+
+    <!--CONTACT US-->
+    <definition name="curtains.contact" extends="curtains.mainLayout">
+
+    </definition>
+
+    <!--PRICING-->
+    <definition name="curtains.pricing" extends="curtains.mainLayout">
+
+    </definition>
+
+    <!--SELF CARE-->
+    <definition name="curtains.selfCare" extends="curtains.mainLayout">
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/user/Account.jsp"/>
+    </definition>
+
+    <!--SELF SERVICE REQUESTS-->
+    <definition name="curtains.selfServiceRequests" extends="curtains.mainLayout">
+
+    </definition>
+
+    <!--ADMIN_SIDE_LAYOUT-->
+    <definition name="curtains.mainLayout.admin" extends="curtains.mainLayout">
+
+    </definition>
+
+    <!--SERVICE_REQUEST-->
+    <definition name="curtains.admin.serviceRequest" extends="curtains.mainLayout.admin">
+
+    </definition>
+
+    <!--SERVICE-->
+    <definition name="curtains.admin.service" extends="curtains.mainLayout.admin">
+
+    </definition>
+
+    <!--NEWS-->
+    <definition name="curtains.admin.news" extends="curtains.mainLayout.admin">
+
+    </definition>
+
+    <!--CONTACTS-->
+    <definition name="curtains.admin.contacts" extends="curtains.mainLayout.admin">
+
+    </definition>
 
 </tiles-definitions>
