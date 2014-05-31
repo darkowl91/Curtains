@@ -17,28 +17,16 @@
                         <div class="row-fluid">
                             <div class="span6">
                                 <ul class="unstyled">
-                                    <li><a class="invarseColor" href="#"><i class="icon-caret-right"></i> About Us</a>
+                                    <li><a class="invarseColor" href="<c:url value="/"/>"><i class="icon-caret-right"></i>Home</a>
                                     </li>
-                                    <li><a class="invarseColor" href="#"><i class="icon-caret-right"></i> Delivery
-                                        Information</a></li>
-                                    <li><a class="invarseColor" href="#"><i class="icon-caret-right"></i> Privecy Police</a>
-                                    </li>
-                                    <li><a class="invarseColor" href="#"><i class="icon-caret-right"></i> Tarms &amp;
-                                        Condations</a></li>
+                                    <li><a class="invarseColor" href="<c:url value="/aboutUs"/>"><i class="icon-caret-right"></i>About</a></li>
+                                    <li><a class="invarseColor" href="<c:url value="/viewContacts"/>"><i class="icon-caret-right"></i>Contact</a></li>
+                                    <li><a class="invarseColor" href="<c:url value="/viewServiceList"/>"><i class="icon-caret-right"></i>Pricing</a></li>
                                 </ul>
                             </div>
 
                             <div class="span6">
-                                <ul class="unstyled">
-                                    <li><a class="invarseColor" href="#"><i class="icon-caret-right"></i> Surf
-                                        Brands</a></li>
-                                    <li><a class="invarseColor" href="#"><i class="icon-caret-right"></i> Customer
-                                        Support</a></li>
-                                    <li><a class="invarseColor" href="#"><i class="icon-caret-right"></i> Special
-                                        Gifs</a></li>
-                                    <li><a class="invarseColor" href="#"><i class="icon-caret-right"></i> Browse Site
-                                        Map</a></li>
-                                </ul>
+
                             </div>
                         </div>
                     </div>

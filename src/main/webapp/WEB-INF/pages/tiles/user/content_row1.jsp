@@ -8,13 +8,13 @@
         <div class="flexslider">
             <ul class="slides">
                 <li>
-                    <img src="<c:url value="/resources/img/614x300.jpg"/>" slt="slide1">
+                    <img src="<c:url value="/resources/img/001.jpg"/>" slt="slide1">
                 </li>
                 <li>
-                    <img src="<c:url value="/resources/img/614x300.jpg"/>" slt="slide2">
+                    <img src="<c:url value="/resources/img/002.jpg"/>" slt="slide2">
                 </li>
                 <li>
-                    <img src="<c:url value="/resources/img/614x300.jpg"/>" slt="slide3">
+                    <img src="<c:url value="/resources/img/003.jpg"/>" slt="slide3">
                 </li>
             </ul>
         </div>

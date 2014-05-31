@@ -9,6 +9,6 @@ public class AboutController {
 
     @RequestMapping(value = "/aboutUs", method = RequestMethod.GET)
     public final String aboutUs() {
-        return "carWash.about";
+        return "curtains.about";
     }
 }

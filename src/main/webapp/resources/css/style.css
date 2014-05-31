@@ -121,8 +121,8 @@ header p {
 }
 
 .middleHeader .siteLogo a {
-    width: 150px;
-    height: 54px;
+    width: 250px;
+    height: 150px;
     display: block;
     font: 0/0 a;
     background: url('../img/logo.png') no-repeat left top;

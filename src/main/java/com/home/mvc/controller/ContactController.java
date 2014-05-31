@@ -40,13 +40,13 @@ public class ContactController {
         model.addAttribute("endIndex", end);
         model.addAttribute("currentIndex", current);
 
-        return "carWash.admin.contacts";
+        return "curtains.admin.contacts";
     }
 
     @RequestMapping(value = "/viewContacts", method = RequestMethod.GET)
     public String contactUs(Model model) {
         model.addAttribute("contact", new Contact());
-        return "carWash.contact";
+        return "curtains.contact";
     }
 
     @RequestMapping(value = "/viewContacts", method = RequestMethod.POST)
@@ -55,7 +55,7 @@ public class ContactController {
                              Locale locale) {
 
         if (result.hasErrors()) {
-            return "carWash.contact";
+            return "curtains.contact";
         }
 
         redirectAttributes.addFlashAttribute("message",

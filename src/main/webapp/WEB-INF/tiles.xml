@@ -6,18 +6,18 @@
     <!-- BASE_LAYOUT -->
     <definition name="curtains.mainLayout" template="/WEB-INF/pages/layouts/mainLayout.jsp">
         <put-attribute name="title" type="string" value="Curtains"/>
-        <put-attribute name="upperHeader" value="/WEB-INF/pages/tiles/user/upperHeader.jsp"/>
-        <put-attribute name="middleHeader" value="/WEB-INF/pages/tiles/user/middleHeader.jsp"/>
-        <put-attribute name="mainNav" value="/WEB-INF/pages/tiles/user/mainNav.jsp"/>
+        <put-attribute name="upperHeader" value="/WEB-INF/pages/tiles/upperHeader.jsp"/>
+        <put-attribute name="middleHeader" value="/WEB-INF/pages/tiles/middleHeader.jsp"/>
+        <put-attribute name="mainNav" value="/WEB-INF/pages/tiles/mainNav.jsp"/>
         <put-attribute name="sideBar" value="/WEB-INF/pages/tiles/sideBar.jsp"/>
-        <put-attribute name="footer" value="/WEB-INF/pages/tiles/user/footer.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/pages/tiles/footer.jsp"/>
     </definition>
 
     <!-- WELCOME -->
     <definition name="curtains.welcome" extends="curtains.mainLayout">
-    <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/user/content_row1.jsp"/>
-    <put-attribute name="content_row2" value="/WEB-INF/pages/tiles/user/content_row2.jsp"/>
-    <put-attribute name="content_row3" value="/WEB-INF/pages/tiles/user/content_row3.jsp"/>
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/user/content_row1.jsp"/>
+        <put-attribute name="content_row2" value="/WEB-INF/pages/tiles/user/content_row2.jsp"/>
+        <put-attribute name="content_row3" value="/WEB-INF/pages/tiles/user/content_row3.jsp"/>
 
     </definition>
 
@@ -33,52 +33,65 @@
 
     <!--ABOUT US-->
     <definition name="curtains.about" extends="curtains.mainLayout">
-
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/user/aboutUs.jsp"/>
     </definition>
 
     <!--CONTACT US-->
     <definition name="curtains.contact" extends="curtains.mainLayout">
-
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/user/contactUs.jsp"/>
     </definition>
 
     <!--PRICING-->
     <definition name="curtains.pricing" extends="curtains.mainLayout">
-
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/user/pricing.jsp"/>
     </definition>
 
     <!--SELF CARE-->
     <definition name="curtains.selfCare" extends="curtains.mainLayout">
-        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/user/Account.jsp"/>
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/user/account.jsp"/>
     </definition>
 
-    <!--SELF SERVICE REQUESTS-->
+    <!--SELF SHADE REQUESTS-->
     <definition name="curtains.selfServiceRequests" extends="curtains.mainLayout">
 
     </definition>
 
     <!--ADMIN_SIDE_LAYOUT-->
     <definition name="curtains.mainLayout.admin" extends="curtains.mainLayout">
-
+        <put-attribute name="mainNav" value="/WEB-INF/pages/tiles/admin/adminNav.jsp"/>
+        <put-attribute name="sideBar" value=""/>
+        <!--not used-->
+        <put-attribute name="footer" value="/WEB-INF/pages/tiles/footer.jsp"/>
     </definition>
 
-    <!--SERVICE_REQUEST-->
+    <!--SHADE_REQUEST_LIST-->
     <definition name="curtains.admin.serviceRequest" extends="curtains.mainLayout.admin">
-
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/admin/shadeRequestList.jsp"/>
     </definition>
 
-    <!--SERVICE-->
+    <!--SHADE_LIST-->
     <definition name="curtains.admin.service" extends="curtains.mainLayout.admin">
-
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/admin/shadeList.jsp"/>
     </definition>
 
-    <!--NEWS-->
-    <definition name="curtains.admin.news" extends="curtains.mainLayout.admin">
+    <!--NEW_SHADE-->
+    <definition name="curtains.admin.new.service" extends="curtains.mainLayout.admin">
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/admin/newShade.jsp"/>
+    </definition>
 
+    <!--NEWS_LIST-->
+    <definition name="curtains.admin.news" extends="curtains.mainLayout.admin">
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/admin/newsList.jsp"/>
+    </definition>
+
+    <!--NEW_NEWS-->
+    <definition name="curtains.admin.new.news" extends="curtains.mainLayout.admin">
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/admin/newNews.jsp"/>
     </definition>
 
     <!--CONTACTS-->
     <definition name="curtains.admin.contacts" extends="curtains.mainLayout.admin">
-
+        <put-attribute name="content_row1" value="/WEB-INF/pages/tiles/admin/messages.jsp"/>
     </definition>
 
 </tiles-definitions>

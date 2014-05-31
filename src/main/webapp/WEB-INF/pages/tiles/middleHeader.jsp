@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <div class="middleHeader">
     <div class="container">
@@ -8,33 +9,11 @@
         <div class="middleContainer clearfix">
 
             <div class="siteLogo pull-left">
-                <h1><a href="index-2.html">ShopFine</a></h1>
+                <h1><a href="<c:url value="/"/>">ShopFine</a></h1>
             </div>
 
             <div class="pull-right">
-                <form method="#" action="#" class="siteSearch">
-                    <div class="input-append">
-                        <input type="text" class="span2" id="appendedInputButton" placeholder="Search...">
-                        <button class="btn btn-primary" type="submit" name=""><i class="icon-search"></i></button>
-                    </div>
-                </form>
-            </div>
 
-            <div class="pull-right">
-                <div class="btn-group">
-                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                        $ <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu currency" role="menu">
-                        <li><a href="#">$</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">¥</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">£</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">€</a></li>
-                    </ul>
-                </div>
                 <div class="btn-group">
                     <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                         EN <span class="caret"></span>
@@ -48,6 +27,7 @@
                     </ul>
                 </div>
 
+                <sec:authorize access="hasRole('ROLE_USER')">
                 <div class="btn-group">
                     <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="icon-shopping-cart"></i> 3 Items
@@ -110,6 +90,7 @@
                         </table>
                     </div>
                 </div>
+                </sec:authorize>
             </div>
 
         </div>

@@ -24,32 +24,4 @@
             </p>
         </div>
     </div>
-
-    <div class="span4">
-        <div id="twitterFeed">
-            <div class="titleHeader clearfix">
-                <h3>Twitter Feed</h3>
-
-                <div class="pagers">
-                    <div class="btn-toolbar">
-                        <button class="btn btn-mini btn-info"><i class="icon-twitter"></i> Follow Us</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tweet">
-                <!-- tweets will generate automaticlly here-->
-            </div>
-
-        </div>
-    </div>
-
-    <div class="span4">
-        <div id="facebookFeed">
-            <div class="titleHeader clearfix">
-                <h3>Facebook Like</h3>
-            </div>
-        </div>
-    </div>
-
 </div>

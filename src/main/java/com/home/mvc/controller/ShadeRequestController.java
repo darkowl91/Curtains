@@ -50,7 +50,7 @@ public class ShadeRequestController {
                 break;
         }
         model.put("filterId", filterId);
-        return "carWash.admin.serviceRequest";
+        return "curtains.admin.serviceRequest";
     }
 
     @RequestMapping(value = "/newServiceRequest", method = RequestMethod.GET)
@@ -89,6 +89,6 @@ public class ShadeRequestController {
     @RequestMapping(value = "/selfServiceRequests", method = RequestMethod.GET)
     public String viewSelfServiceRequests(Model model, Principal principal) {
         model.addAttribute("requests", shadeRequestService.findByUsername(principal.getName()));
-        return "carWash.selfServiceRequests";
+        return "curtains.selfServiceRequests";
     }
 }

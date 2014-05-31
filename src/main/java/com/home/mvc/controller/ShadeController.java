@@ -18,17 +18,22 @@ public class ShadeController {
     @Autowired
     private IBaseEntityService<Shade, Long, IShadeRepository> service;
 
+    @RequestMapping(value = "/newService", method = RequestMethod.GET)
+    public String newService(ModelMap model) {
+        model.put("newShade", new Shade());
+        return "curtains.admin.new.service";
+    }
+
     @RequestMapping(value = "/viewServiceList", method = RequestMethod.GET)
     public String viewServiceList(ModelMap model) {
         model.put("SERVICES", service.findAll());
-        return "carWash.pricing";
+        return "curtains.pricing";
     }
 
     @RequestMapping(value = "/manageServices", method = RequestMethod.GET)
     public String manageServices(ModelMap model) {
         model.put("SERVICES", service.findAll());
-        model.put("newShade", new Shade());
-        return "carWash.admin.service";
+        return "curtains.admin.service";
     }
 
     @RequestMapping(value = "/createService", method = RequestMethod.POST)
