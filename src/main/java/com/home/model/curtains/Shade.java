@@ -2,25 +2,26 @@ package com.home.model.curtains;
 
 import com.home.model.BaseEntity;
 import com.home.model.image.Picture;
-import org.hibernate.annotations.BatchSize;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.math.BigDecimal;
-import java.util.List;
 
 @Entity
 @Table(name = "Shade", schema = "Curtains")
 public class Shade extends BaseEntity {
 
-    @Column(name = "Price")
-    @Size(max = 10, message = "{com.home.model.curtains.Shade.price}")
+    private static final long serialVersionUID = 5698785987373041545L;
+
+    @Column(name = "Price", nullable = false)
+//    @Size(max = 10, message = "{com.home.model.curtains.Shade.price}") TODO: need to implement validator
     private BigDecimal price;
 
-    @OneToMany(mappedBy = "picture", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @BatchSize(size = 3)
-    private List<Picture> pictures;
+    /*Could not write JSON: No serializer found for class org.hibernate.proxy.pojo.javassist.JavassistLazyInitializer*/
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "PictureId")
+    private Picture pictures;
 
     @Column(name = "Name", nullable = false)
     @NotEmpty(message = "{com.home.model.curtains.Shade.name.notEmpty}")
@@ -40,11 +41,11 @@ public class Shade extends BaseEntity {
         this.price = price;
     }
 
-    public List<Picture> getPictures() {
+    public Picture getPictures() {
         return pictures;
     }
 
-    public void setPictures(List<Picture> pictures) {
+    public void setPictures(Picture pictures) {
         this.pictures = pictures;
     }
 

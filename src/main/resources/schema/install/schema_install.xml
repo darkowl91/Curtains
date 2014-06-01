@@ -119,6 +119,7 @@
             </column>
             <!--<column name="WARRANTY" type="integer(1)"/>-->
             <column name="Type" type="varchar(255)"/>
+            <column name="PictureId" type="bigint"/>
         </createTable>
         <rollback>
             <dropTable tableName="Shade"/>

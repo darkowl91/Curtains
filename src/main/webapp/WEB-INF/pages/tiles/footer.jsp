@@ -68,12 +68,14 @@
                     </div>
 
                     <div class="newslatter">
-                        <form method="#" action="#">
-                            <input class="input-block-level" type="text" name="email" value=""
+                        <form id="contact_form">
+                            <input id="name" class="input-block-level" type="text" name="name"
                                    placeholder="Your Name..." Name="">
-                            <input class="input-block-level" type="text" name="email" value=""
+                            <input id="email" class="input-block-level" type="text" name="email"
                                    placeholder="Your E-Mail..." Name="">
-                            <button class="btn btn-block" type="submit" name="">Join Us Now</button>
+                            <input id="message" class="input-block-level" type="text" name="message"
+                                   placeholder="Message..." Name="">
+                            <button class="btn btn-block" type="submit" name="">Contact Us Now</button>
                         </form>
                     </div>
 

@@ -17,6 +17,8 @@ import java.util.List;
 @Table(name = "User", schema = "Curtains")
 public class User extends BaseEntity {
 
+    private static final long serialVersionUID = 3620886836493348113L;
+
     @Column(name = "Username", nullable = false, unique = true)
     @NotEmpty(message = "{com.home.model.account.User.username.notEmpty}")
     @Size(max = 255, message = "{com.home.model.account.User.username.size}")

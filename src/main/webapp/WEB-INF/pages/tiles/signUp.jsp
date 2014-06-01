@@ -4,12 +4,12 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 
-<spring:message code="carWash.signUp.username" var="username" />
-<spring:message code="carWash.signUp.password" var="password" />
-<spring:message code="carWash.signUp.passwordConfirm" var="passwordConfirm" />
-<spring:message code="carWash.signUp.firstName" var="firstName" />
-<spring:message code="carWash.signUp.lastName" var="lastName" />
-<spring:message code="carWash.signUp.email" var="email" />
+<spring:message code="signUp.username" var="username" />
+<spring:message code="signUp.password" var="password" />
+<spring:message code="signUp.passwordConfirm" var="passwordConfirm" />
+<spring:message code="signUp.firstName" var="firstName" />
+<spring:message code="signUp.lastName" var="lastName" />
+<spring:message code="signUp.email" var="email" />
 
 <div class="row">
 
@@ -25,44 +25,41 @@
 
         <legend>&nbsp;&nbsp;&nbsp;&nbsp;1. Personal Informations</legend>
 
-        <div class="control-group error">
-            <label class="control-label" for="userName">Last Name: <span
-                    class="text-error">*</span></label>
+        <div class="control-group">
+            <label class="control-label" for="userName">Username: <span class="text-error">*</span></label>
 
             <div class="controls">
-                <input type="text" id="userName" placeholder="Doe">
-                <span class="help-inline"><i class="icon-remove"></i> Invalid input!</span>
+                <form:input path="username" type="text" id="userName" placeholder="Username"/>
+                <%--<span class="help-inline"><i class="icon-remove"></i> Invalid input!</span>--%>
             </div>
         </div>
 
-        <div class="control-group success">
-            <label class="control-label" for="inputFirstName">First Name: <span
-                    class="text-error">*</span></label>
+        <div class="control-group">
+            <label class="control-label" for="email">Email: <span class="text-error">*</span></label>
 
             <div class="controls">
-                <input type="text" id="inputFirstName" placeholder="John">
-                <span class="help-inline"><i class="icon-ok"></i> Avaliable input!</span>
-            </div>
-        </div>
-        <!--end control-group-->
-
-        <div class="control-group error">
-            <label class="control-label" for="inputLastName">Last Name: <span
-                    class="text-error">*</span></label>
-
-            <div class="controls">
-                <input type="text" id="inputLastName" placeholder="Doe">
-                <span class="help-inline"><i class="icon-remove"></i> Invalid input!</span>
+                <form:input path="email" type="email" id="email" placeholder="example@mail.com"/>
+                <%--<span class="help-inline"><i class="icon-ok"></i> Avaliable input!</span>--%>
             </div>
         </div>
         <!--end control-group-->
 
         <div class="control-group">
-            <label class="control-label" for="inputEMAdd">E-Mail Address: <span
-                    class="text-error">*</span></label>
+            <label class="control-label" for="firstName">First Name: <span class="text-error">*</span></label>
 
             <div class="controls">
-                <input type="text" id="inputEMAdd" placeholder="example@example.com">
+                <form:input path="firstName" type="text" id="firstName" placeholder="First Name"/>
+                <%--<span class="help-inline"><i class="icon-remove"></i> Invalid input!</span>--%>
+            </div>
+        </div>
+        <!--end control-group-->
+
+        <div class="control-group">
+            <label class="control-label" for="lastName">Last Name: <span class="text-error">*</span></label>
+
+            <div class="controls">
+                <form:input path="lastName" type="text" id="lastName" placeholder="Last Name"/>
+                <%--<span class="help-inline"><i class="icon-remove"></i> Invalid input!</span>--%>
             </div>
         </div>
         <!--end control-group-->
@@ -71,16 +68,16 @@
 
 
         <div class="control-group">
-            <label class="control-label" for="inputPass">Password: <span class="text-error">*</span></label>
+            <label class="control-label" for="password">Password: <span class="text-error">*</span></label>
             <div class="controls">
-                <input type="password" id="inputPass" placeholder="**********">
+                <form:password path="password" id="password" placeholder="**********"/>
             </div>
         </div>
 
         <div class="control-group">
-            <label class="control-label" for="inputConPass">Re-Type Password: <span class="text-error">*</span></label>
+            <label class="control-label" for="passwordConfirm">Re-Type Password: <span class="text-error">*</span></label>
             <div class="controls">
-                <input type="password" id="inputConPass" placeholder="**********">
+                <form:password path="passwordConfirm"  id="passwordConfirm" placeholder="**********"/>
             </div>
         </div>
 

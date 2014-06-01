@@ -13,10 +13,12 @@ import java.util.Calendar;
 @Table(name = "News", schema = "Curtains")
 public class News extends BaseEntity {
 
+    private static final long serialVersionUID = 4442233806406040301L;
+
     @Column(name = "Date")
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    @NotEmpty(message = "{com.home.model.advertisement.News.date.notEmpty}")
+//    @NotEmpty(message = "{com.home.model.advertisement.News.date.notEmpty}") TODO: need to implement validator
     private Calendar date;
 
     @Column(name = "Title", nullable = false)

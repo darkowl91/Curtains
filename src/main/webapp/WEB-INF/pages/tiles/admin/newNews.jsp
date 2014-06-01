@@ -13,57 +13,53 @@
         </div>
         <!--end titleHeader-->
 
-        <form:form method="post" modelAttribute="newUser" cssClass="form-horizontal">
-            <legend>&nbsp;&nbsp;&nbsp;&nbsp;1. Personal Informations</legend>
+        <form:form method="post" modelAttribute="news" action="createNews" cssClass="form-horizontal" enctype="multipart/form-data">
+            <legend>&nbsp;&nbsp;&nbsp;&nbsp;1. Add News</legend>
 
 
-            <div class="control-group error">
-                <label class="control-label" for="userName">Date: <span
-                        class="text-error">*</span></label>
+            <div class="control-group">
+                <label class="control-label" for="date">Date: <span class="text-error">*</span></label>
 
                 <div class="controls">
-                    <input type="text" id="userName" placeholder="Doe">
-                    <span class="help-inline"><i class="icon-remove"></i> Invalid input!</span>
+                    <form:input path="date" type="date" id="date" placeholder="mm-dd-yyy"/>
+                    <%--<span class="help-inline"><i class="icon-remove"></i> Invalid input!</span>--%>
                 </div>
             </div>
 
-            <div class="control-group success">
-                <label class="control-label" for="inputFirstName">Title: <span
+            <div class="control-group">
+                <label class="control-label" for="title">Title: <span
                         class="text-error">*</span></label>
 
                 <div class="controls">
-                    <input type="text" id="inputFirstName" placeholder="John">
-                    <span class="help-inline"><i class="icon-ok"></i> Avaliable input!</span>
-                </div>
-            </div>
-            <!--end control-group-->
-
-            <div class="control-group error">
-                <label class="control-label" for="inputLastName">Description: <span
-                        class="text-error">*</span></label>
-
-                <div class="controls">
-                    <input type="text" id="inputLastName" placeholder="Doe">
-                    <span class="help-inline"><i class="icon-remove"></i> Invalid input!</span>
+                    <form:input path="title" type="text" id="title" placeholder="Title"/>
+                    <%--<span class="help-inline"><i class="icon-ok"></i> Avaliable input!</span>--%>
                 </div>
             </div>
             <!--end control-group-->
 
             <div class="control-group">
-                <label class="control-label" for="inputPicture">Content: <span
-                        class="text-error">*</span></label>
+                <label class="control-label" for="description">Description: <span class="text-error">*</span></label>
 
                 <div class="controls">
-                    <input type="text" id="inputPicture" placeholder="example@example.com">
+                    <form:input path="description" type="text" id="description" placeholder="Description"/>
+                    <%--<span class="help-inline"><i class="icon-remove"></i> Invalid input!</span>--%>
+                </div>
+            </div>
+            <!--end control-group-->
+
+            <div class="control-group">
+                <label class="control-label" for="content">Content: <span class="text-error">*</span></label>
+
+                <div class="controls">
+                    <form:textarea path="content" type="text" id="content" rows="3" placeholder="Content"/>
                 </div>
             </div>
             ​
             <div class="control-group">
-                <label class="control-label" for="inputEMAdd">Picture: <span
-                        class="text-error">*</span></label>
+                <label class="control-label" for="picture">Picture: <span class="text-error">*</span></label>
 
                 <div class="controls">
-                    <input type="text" id="inputEMAdd" placeholder="example@example.com">
+                    <form:input path="picture" type="file" id="picture"/>
                 </div>
             </div>
 
@@ -71,20 +67,9 @@
                 <div class="controls">
 
                     <br>
-                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="submit" class="btn btn-primary">Add News</button>
                 </div>
             </div>
-            <!--end control-group-->
         </form:form>
-        <!--end form-->
-
     </div>
-    <!--end register-->
-
-    <!--end span9-->
-
-
-
-    <!--end span3-->
-
 </div>

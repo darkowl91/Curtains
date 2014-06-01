@@ -28,13 +28,13 @@ public abstract class BaseEntity implements Serializable {
 
         BaseEntity that = (BaseEntity) o;
 
-        if (!id.equals(that.id)) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        return id.hashCode();
+        return id != null ? id.hashCode() : 0;
     }
 }

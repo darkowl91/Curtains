@@ -10,6 +10,8 @@ import javax.validation.constraints.Pattern;
 @Table(name = "Phone", schema = "Curtains")
 public class Phone extends BaseEntity {
 
+    private static final long serialVersionUID = -6484443641351947262L;
+
     @Column(name = "Operator")
     private Operator operator;
 
@@ -58,4 +60,6 @@ public class Phone extends BaseEntity {
     public void setUser(User user) {
         this.user = user;
     }
+
+
 }

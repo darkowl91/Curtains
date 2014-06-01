@@ -13,6 +13,8 @@ import java.util.Calendar;
 @Table(name = "Contact", schema = "Curtains")
 public class Contact extends BaseEntity {
 
+    private static final long serialVersionUID = -1768239267452455336L;
+
     @Column(name = "Name", nullable = false)
     @NotEmpty(message = "{com.home.model.contact.Contact.name.notEmpty}")
     @Size(max = 128, message = "{com.home.model.contact.Contact.name.size}")

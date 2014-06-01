@@ -12,6 +12,8 @@ import javax.validation.constraints.Size;
 @Table(name = "Authority", schema = "Curtains")
 public class Authority extends BaseEntity {
 
+    private static final long serialVersionUID = -8645411107211718433L;
+
     @Column(name = "Name", nullable = false)
     @NotEmpty(message = "{com.home.model.account.Authority.name.notEmpty}")
     @Size(max = 128, message = "{com.home.model.account.Authority.name.Size}")

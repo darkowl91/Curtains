@@ -11,6 +11,8 @@ import java.util.Calendar;
 @Table(name = "ShadeRequest", schema = "Curtains")
 public class ShadeRequest extends BaseEntity {
 
+    private static final long serialVersionUID = 1161335604190027979L;
+
     @Column(name = "Date", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)

@@ -15,6 +15,8 @@ import javax.validation.constraints.Size;
 @Table(name = "Picture", schema = "Curtains")
 public class Picture extends BaseEntity {
 
+    private static final long serialVersionUID = 6556507900823885901L;
+
     @Column(name = "PictureName", nullable = false)
     @NotEmpty(message = "{com.home.model.image.Picture.pictureName.notEmpty}")
     @Size(max = 255, message = "{com.home.model.image.Picture.pictureName.size}")
