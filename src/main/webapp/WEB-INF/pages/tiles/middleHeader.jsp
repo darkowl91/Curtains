@@ -16,7 +16,7 @@
 
                 <div class="btn-group">
                     <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                        EN <span class="caret"></span>
+                        RU <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu language" role="menu">
                         <li><a href="#">FR</a></li>

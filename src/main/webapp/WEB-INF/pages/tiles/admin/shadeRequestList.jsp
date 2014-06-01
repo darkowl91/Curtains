@@ -13,12 +13,12 @@
         <table class="table">
             <thead>
             <tr>
-                <th><h5><spring:message code="admin.shadesRequest.list.user"/>User</h5></th>
-                <th class="desc"><h5><spring:message code="admin.shadesRequest.list.user.detail"/>User Details</h5></th>
-                <th><h5><spring:message code="admin.shadesRequest.list.product"/>Product</h5></th>
-                <th><h5><spring:message code="admin.shadesRequest.list.product.details"/>Product Details</h5></th>
-                <th><h5><spring:message code="admin.shadesRequest.list.price"/>Price</h5></th>
-                <th><h5><spring:message code="admin.shadesRequest.list.action"/>Action</h5></th>
+                <th><h5><spring:message code="admin.shadesRequest.list.user"/></h5></th>
+                <th class="desc"><h5><spring:message code="admin.shadesRequest.list.user.detail"/></h5></th>
+                <th><h5><spring:message code="admin.shadesRequest.list.product"/></h5></th>
+                <th><h5><spring:message code="admin.shadesRequest.list.product.details"/></h5></th>
+                <th><h5><spring:message code="admin.shadesRequest.list.price"/></h5></th>
+                <th><h5><spring:message code="admin.shadesRequest.list.action"/></h5></th>
             </tr>
             </thead>
             <tbody>
