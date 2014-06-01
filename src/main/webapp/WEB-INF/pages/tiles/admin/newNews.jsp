@@ -9,7 +9,7 @@
     <div class="register">
 
         <div class="titleHeader clearfix">
-            <h3>Create New Account</h3>
+            <h3> <spring:message code="admin.news.create.new"/></h3>
         </div>
         <!--end titleHeader-->
 
@@ -18,7 +18,7 @@
 
 
             <div class="control-group">
-                <label class="control-label" for="date">Date: <span class="text-error">*</span></label>
+                <label class="control-label" for="date"><spring:message code="admin.news.create.date"/>: <span class="text-error">*</span></label>
 
                 <div class="controls">
                     <form:input path="date" type="date" id="date" placeholder="mm-dd-yyy"/>
@@ -27,7 +27,7 @@
             </div>
 
             <div class="control-group">
-                <label class="control-label" for="title">Title: <span
+                <label class="control-label" for="title"><spring:message code="admin.news.create.title"/>: <span
                         class="text-error">*</span></label>
 
                 <div class="controls">
@@ -38,7 +38,7 @@
             <!--end control-group-->
 
             <div class="control-group">
-                <label class="control-label" for="description">Description: <span class="text-error">*</span></label>
+                <label class="control-label" for="description"><spring:message code="admin.news.create.description"/>: <span class="text-error">*</span></label>
 
                 <div class="controls">
                     <form:input path="description" type="text" id="description" placeholder="Description"/>
@@ -48,7 +48,7 @@
             <!--end control-group-->
 
             <div class="control-group">
-                <label class="control-label" for="content">Content: <span class="text-error">*</span></label>
+                <label class="control-label" for="content"><spring:message code="admin.news.create.content"/>: <span class="text-error">*</span></label>
 
                 <div class="controls">
                     <form:textarea path="content" type="text" id="content" rows="3" placeholder="Content"/>
@@ -56,7 +56,7 @@
             </div>
             ​
             <div class="control-group">
-                <label class="control-label" for="picture">Picture: <span class="text-error">*</span></label>
+                <label class="control-label" for="picture"><spring:message code="admin.news.create.picture"/>: <span class="text-error">*</span></label>
 
                 <div class="controls">
                     <form:input path="picture" type="file" id="picture"/>
@@ -67,7 +67,7 @@
                 <div class="controls">
 
                     <br>
-                    <button type="submit" class="btn btn-primary">Add News</button>
+                    <button type="submit" class="btn btn-primary"><spring:message code="admin.news.create.add"/></button>
                 </div>
             </div>
         </form:form>

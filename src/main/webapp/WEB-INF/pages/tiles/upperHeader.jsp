@@ -7,9 +7,9 @@
     <div class="container">
         <ul class="pull-right inline">
             <sec:authorize access="isAuthenticated()">
-                <li><a class="invarseColor" href="<c:url value="/selfCare"/> ">My Account</a></li>
+                <%--<li><a class="invarseColor" href="<c:url value="/selfCare"/> ">My Account</a></li>--%>
                 <li class="divider-vertical"></li>
-                <li><a class="invarseColor" href="<c:url value="/sigOut"/>">Checkout</a></li>
+                <li><a class="invarseColor" href="<c:url value="/sigOut"/>"><spring:message code="user.welcome.checkout"/></a></li>
             </sec:authorize>
             <%--<li class="divider-vertical"></li>--%>
             <%--<li><a class="invarseColor" href="#">My Wish List (5)</a></li>--%>
@@ -21,8 +21,8 @@
         </ul>
         <p>
             <sec:authorize access="isAnonymous()">
-                Welcome to ShopFine, <a href="<c:url value="/signIn"/>">Login</a> or <a href="<c:url value="/signUp"/>">Create
-                new account</a>
+                <spring:message code="user.welcome"/><a href="<c:url value="/signIn"/>"><spring:message code="user.welcome.login"/></a> <spring:message code="user.welcome.or"/>
+                <a href="<c:url value="/signUp"/>"><spring:message code="user.welcome.create.new.account"/></a>
             </sec:authorize>
         </p>
     </div>

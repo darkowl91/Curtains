@@ -1,126 +1,81 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <div class="container">
 
     <div class="row">
-
-        <%--<div class="span9">--%>
-
-            <div class="titleHeader clearfix">
-                <h3>Create New Account</h3>
-            </div><!--end titleHeader-->
-            <br/>
+        <div class="titleHeader clearfix">
+            <h3><spring:message code="admin.shadesRequest.list"/></h3>
+        </div>
+        <br/>
         <table class="table">
             <thead>
             <tr>
-                <th><h5>Image</h5></th>
-                <th class="desc"><h5>Descraption</h5></th>
-                <th><h5>Model</h5></th>
-                <th><h5>Stock</h5></th>
-                <th><h5>Unit Price</h5></th>
-                <th><h5>Action</h5></th>
+                <th><h5><spring:message code="admin.shadesRequest.list.user"/>User</h5></th>
+                <th class="desc"><h5><spring:message code="admin.shadesRequest.list.user.detail"/>User Details</h5></th>
+                <th><h5><spring:message code="admin.shadesRequest.list.product"/>Product</h5></th>
+                <th><h5><spring:message code="admin.shadesRequest.list.product.details"/>Product Details</h5></th>
+                <th><h5><spring:message code="admin.shadesRequest.list.price"/>Price</h5></th>
+                <th><h5><spring:message code="admin.shadesRequest.list.action"/>Action</h5></th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>
-                    <a href="#"><img src="img/72x72.jpg" alt=""></a>
-                </td>
-                <td class="desc">
-                    <h4><a href="#" class="invarseColor">
-                        Foliomania the designer
-                    </a></h4>
-                    <ul class="rating clearfix">
-                        <li><i class="star-on"></i></li>
-                        <li><i class="star-on"></i></li>
-                        <li><i class="star-on"></i></li>
-                        <li><i class="star-off"></i></li>
-                        <li><i class="star-off"></i></li>
-                    </ul>
-                    <ul class="unstyled">
-                        <li>No. CtAw9458</li>
-                    </ul>
-                </td>
-                <td>
-                    Designwe
-                </td>
-                <td>
-                    <i style="color:#468847;" class="icon-ok"></i>
-                </td>
-                <td>
-                    <h2>$150.00</h2>
-                </td>
-                <td>
-                    <button class="btn btn-small btn-primary" data-title="+To Cart" data-placement="top" rel="tooltip" data-original-title=""><i class="icon-shopping-cart"></i></button>
-                    <button class="btn btn-small btn-danger" data-title="Remove" data-placement="top" rel="tooltip" data-original-title=""><i class="icon-trash"></i></button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#"><img src="img/72x72.jpg" alt=""></a>
-                </td>
-                <td class="desc">
-                    <h4><a href="#" class="invarseColor">
-                        Foliomania the designer
-                    </a></h4>
-                    <ul class="rating clearfix">
-                        <li><i class="star-on"></i></li>
-                        <li><i class="star-on"></i></li>
-                        <li><i class="star-on"></i></li>
-                        <li><i class="star-on"></i></li>
-                        <li><i class="star-off"></i></li>
-                    </ul>
-                    <ul class="unstyled">
-                        <li>No. CtAw9458</li>
-                    </ul>
-                </td>
-                <td class="quantity">
-                    Designwe
-                </td>
-                <td class="sub-price">
-                    <i style="color:#b94a48;" class="icon-remove-sign"></i>
-                </td>
-                <td class="total-price">
-                    <h2>$150.00</h2>
-                </td>
-                <td>
-                    <button class="btn btn-small btn-primary" data-title="+To Cart" data-placement="top" rel="tooltip" data-original-title=""><i class="icon-shopping-cart"></i></button>
-                    <button class="btn btn-small btn-danger" data-title="Remove" data-placement="top" rel="tooltip" data-original-title=""><i class="icon-trash"></i></button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#"><img src="img/72x72.jpg" alt=""></a>
-                </td>
-                <td class="desc">
-                    <h4><a href="#" class="invarseColor">
-                        Foliomania the designer
-                    </a></h4>
-                    <ul class="unstyled">
-                        <li>No. CtAw9458</li>
-                        <li>Nicka Corparation</li>
-                        <li>25 Points</li>
-                    </ul>
-                </td>
-                <td class="quantity">
-                    anything
-                </td>
-                <td>
-                    <i style="color:#468847;" class="icon-ok"></i>
-                </td>
-                <td>
-                    <h2>$150.00</h2>
-                </td>
-                <td>
-                    <button class="btn btn-small btn-primary" data-title="+To Cart" data-placement="top" rel="tooltip" data-original-title=""><i class="icon-shopping-cart"></i></button>
-                    <button class="btn btn-small btn-danger" data-title="Remove" data-placement="top" rel="tooltip" data-original-title=""><i class="icon-trash"></i></button>
-                </td>
-            </tr>
+            <c:forEach var="shadeRequest" items="${SHADE_REQUEST}">
+                <tr>
+                    <td>
+                        <a href="#"><img width="72" height="72"
+                                         src="data:image/jpeg;base64,${shadeRequest.user.picture.imageAsString}"
+                                         alt=""></a>
+                    </td>
+                    <td class="desc">
+                        <h4>
+                                ${shadeRequest.user.firstName} ${shadeRequest.user.lastName}
+                        </h4>
+                        <ul class="rating clearfix">
+                            <li>${shadeRequest.user.email}</li>
+                        </ul>
+                        <ul class="unstyled">
+                            <c:forEach var="userPhone" items="${shadeRequest.user.phones}" end="3">
+                                <li>${userPhone.phoneValue}</li>
+                            </c:forEach>
+                        </ul>
+                    </td>
+                    <td>
+                            ${shadeRequest.shade.name}
+                    </td>
+                    <td>
+                        Model: ${shadeRequest.shade.type}
+                        <br/>
+                        Date: <f:formatDate type="BOTH" dateStyle="full" value="${shadeRequest.date.time}"/>
+                    </td>
+                    <td>
+                        <h2>$ ${shadeRequest.shade.price}</h2>
+                    </td>
+                    <td>
+
+
+                        <c:if test="${filterId == 'toApprove'}">
+                            <button class="btn btn-small btn-primary" data-title="Approve" data-placement="top"
+                                    rel="tooltip"
+                                    onclick="window.location.href='<c:url
+                                            value="/approveServiceRequest?id=${shadeRequest.id}"/>'"
+                                    data-original-title=""><i style="color:#ffffff;" class="icon-ok"></i></button>
+                        </c:if>
+
+
+                        <button class="btn btn-small btn-danger" data-title="Remove" data-placement="top"
+                                rel="tooltip" data-original-title="" onclick="window.location.href='<c:url
+                                value="/removeServiceRequest?id=${shadeRequest.id}&filterId=${filterId}"/>'">
+                            <i class="icon-trash"></i></button>
+                    </td>
+                </tr>
+            </c:forEach>
+
             </tbody>
         </table>
-        <%--</div><!--end span9-->--%>
+        <%--</div>
 
 
         <%--<div class="span3">--%>
@@ -140,6 +95,6 @@
         <%--</ul>--%>
         <%--</div><!--end span3-->--%>
 
-    </div><!--end row-->
+    </div>
 
 </div>

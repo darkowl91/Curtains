@@ -10,16 +10,16 @@
     <div class="register">
 
         <div class="titleHeader clearfix">
-            <h3>Create New Account</h3>
+            <h3><spring:message code="admin.shade.create.new"/></h3>
         </div>
         <!--end titleHeader-->
 
         <form:form method="post" modelAttribute="newShade" action="createService" cssClass="form-horizontal" enctype="multipart/form-data">
-            <legend>&nbsp;&nbsp;&nbsp;&nbsp;1. Shade information</legend>
+            <legend>&nbsp;&nbsp;&nbsp;&nbsp;<spring:message code="admin.shade.create.new.info"/></legend>
 
 
             <div class="control-group">
-                <label class="control-label" for="userName">Name: <span class="text-error">*</span></label>
+                <label class="control-label" for="userName"><spring:message code="admin.shade.create.new.product.name"/>: <span class="text-error">*</span></label>
 
                 <div class="controls">
                     <form:input path="name" type="text" id="userName" placeholder="Shae name"/>
@@ -28,7 +28,7 @@
             </div>
 
             <div class="control-group">
-                <label class="control-label" for="inputFirstName">Type: <span class="text-error">*</span></label>
+                <label class="control-label" for="inputFirstName"><spring:message code="admin.shade.create.new.product.type"/>: <span class="text-error">*</span></label>
 
                 <div class="controls">
                     <form:input path="type" type="text" id="inputFirstName" placeholder="Shade Type"/>
@@ -38,7 +38,7 @@
             <!--end control-group-->
 
             <div class="control-group">
-                <label class="control-label" for="inputLastName">Price: <span class="text-error">*</span></label>
+                <label class="control-label" for="inputLastName"><spring:message code="admin.shade.create.new.product.price"/>: <span class="text-error">*</span></label>
 
                 <div class="controls">
                     <form:input path="price" type="number" id="inputLastName" placeholder="$"/>
@@ -48,7 +48,7 @@
             <!--end control-group-->
 
             <div class="control-group">
-                <label class="control-label" for="inputEMAdd">Picture: <span class="text-error">*</span></label>
+                <label class="control-label" for="inputEMAdd"><spring:message code="admin.shade.create.new.product.picture"/>: <span class="text-error">*</span></label>
 
                 <div class="controls">
                     <form:input path="pictures" type="file" id="inputEMAdd"/>
@@ -59,7 +59,7 @@
                 <div class="controls">
 
                     <br>
-                    <button type="submit" class="btn btn-primary">Add new</button>
+                    <button type="submit" class="btn btn-primary"><spring:message code="admin.shade.create.new.product.create"/></button>
                 </div>
             </div>
             <!--end control-group-->

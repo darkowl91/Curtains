@@ -10,16 +10,16 @@
             <ul class="nav">
                 <li class="active"><a href="<c:url value="/"/>"><i class="icon-home"></i></a></li>
 
-                <li><a href="<c:url value="/aboutUs"/>">About &nbsp;</a></li>
+                <li><a href="<c:url value="/aboutUs"/>"><spring:message code="user.mainNav.about"/> &nbsp;</a></li>
 
                 <%--<sec:authorize access="isAuthenticated()">--%>
-                <li><a href="<c:url value="/viewServiceList"/>">Shade &nbsp;</a></li>
+                <li><a href="<c:url value="/viewServiceList"/>"><spring:message code="user.mainNav.shade"/> &nbsp;</a></li>
                 <%--</sec:authorize>--%>
 
-                <li><a href="<c:url value="/viewContacts"/>">Contact us &nbsp;</a></li>
+                <li><a href="<c:url value="/viewContacts"/>"><spring:message code="user.mainNav.contact"/> &nbsp;</a></li>
 
                 <sec:authorize access="isAuthenticated()">
-                <li><a href="<c:url value="/selfCare"/>">SelfCare</a></li>
+                <%--<li><a href="<c:url value="/selfCare"/>"><spring:message code="user.mainNav.selfCare"/></a></li>--%>
                 </sec:authorize>
 
                 <%--<li><a href="#">FootWear</a></li>--%>
@@ -27,7 +27,7 @@
                 <%--<li><a href="#">OutLet</a></li>--%>
 
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
-                <li><a href="<c:url value="/manageServiceRequestList?filterId=all"/>">Administration</a></li>
+                <li><a href="<c:url value="/manageServiceRequestList?filterId=all"/>"><spring:message code="user.mainNav.administration"/></a></li>
                 </sec:authorize>
             </ul>
         </div>

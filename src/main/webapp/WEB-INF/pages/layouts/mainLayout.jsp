@@ -47,6 +47,8 @@
     <c:forEach var="css_url" items="${specific_css}">
         <link href="<c:url value="${css_url}"/>" rel="stylesheet" type="text/css" media="screen"/>
     </c:forEach>
+    <%--notyfications--%>
+    <script src="<c:url value="/resources/js/noty/packaged/jquery.noty.packaged.min.js"/>"></script>
 </head>
 <body>
 <div id="mainContainer" class="clearfix">
@@ -86,8 +88,7 @@
 <script src="<c:url value="/resources/js/fancybox/jquery.fancybox.js"/>"></script>
 <!-- custom function-->
 <script src="<c:url value="/resources/js/custom.js"/>"></script>
-<%--notyfications--%>
-<script src="<c:url value="/resources/js/noty/packaged/jquery.noty.packaged.min.js"/>"></script>
+
 <%--validation--%>
 <script src="<c:url value="/resources/js/jquery-validate.min.js"/>"></script>
 <!-- Page Specific Scripts -->

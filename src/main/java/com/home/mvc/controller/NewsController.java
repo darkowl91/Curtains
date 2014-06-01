@@ -48,7 +48,7 @@ public class NewsController {
     public String editNews(Long id, ModelMap model) {
         News news = service.findOne(id);
         model.put("news", news);
-        return "curtains.admin.news";
+        return "curtains.admin.new.news";
     }
 
 }

@@ -7,20 +7,17 @@
     <div class="span4">
         <div id="aboutUs">
             <div class="titleHeader clearfix">
-                <h3>About Us</h3>
+                <h3><spring:message code="user.aboutUs"/></h3>
 
                 <div class="pagers">
                     <div class="btn-toolbar">
-                        <button class="btn btn-mini">Know More</button>
+                        <button class="btn btn-mini" onclick="window.location.href='<c:url value="/viewContacts"/>'"><spring:message code="user.aboutUs.more"/></button>
                     </div>
                 </div>
             </div>
 
             <p>
-                Quisque odio sem, molestie interdum sollicitudin ut, mollis a metus. Donec dignissim, odio nec elementum
-                mattis, elit ligula sollicitudin massa, et venenatis neque nibh at urna. Pellentesque habitant morbi
-                tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque egestas, velit non
-                adipiscing pretium, tortor nulla fringilla nisl, ut aliquet felis nisl eu orci.
+                <spring:message code="user.aboutUs.info"/>
             </p>
         </div>
     </div>

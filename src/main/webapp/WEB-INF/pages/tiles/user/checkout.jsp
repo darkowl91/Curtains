@@ -9,7 +9,7 @@
     <div class="checkout-header">
         <a href="#" class="invarseColor pull-right" rel="tooltip" data-placment="top" data-title="EDIT"
            style="margin-right:12px; color:#333; font-size:13px;"><i class="icon-pencil"></i></a>
-        <h4><i class="icon-caret-down"></i> Checkout Options</h4>
+        <h4><i class="icon-caret-down"></i><spring:message code="user.checkout"/>Checkout Options</h4>
     </div>
 
     <div class="checkout-content">
@@ -17,39 +17,40 @@
             <table>
                 <tr>
                     <td width="50%">
-                        <h3>New Customer</h3>
+                        <h3><spring:message code="user.checkout"/>New Customer</h3>
 
                         <form mehtod="#" action="#">
                             <label class="radio">
                                 <input type="radio" name="optionsRadios" value="1" checked>
-                                Registeration Account.
+                                <spring:message code="user.checkout"/> Registeration Account.
                             </label>
                             <label class="radio">
                                 <input type="radio" name="optionsRadios" value="0">
-                                Contuine as guest account.
+                                <spring:message code="user.checkout"/>Contuine as guest account.
                             </label>
                         </form>
                         <!--end form-->
-                        <p>By creating an account you will be able to shop faster, be up to date on an order's
+                        <p><spring:message code="user.checkout"/>
+                            By creating an account you will be able to shop faster, be up to date on an order's
                             status, and keep track of the orders you have previously made.</p>
                         <a href="#" class="btn">Register</a>
                     </td>
 
                     <td width="50%">
-                        <h3>Returning Customer</h3>
+                        <h3><spring:message code="user.checkout"/>Returning Customer</h3>
 
                         <form method="#" action="#" class="">
                             <div class="controls">
-                                <label>Your E-Mail: <span class="text-error">*</span></label>
+                                <label><spring:message code="user.checkout"/>Your E-Mail: <span class="text-error">*</span></label>
                                 <input type="text" name="" value="" placeholder="example@example.com">
                             </div>
                             <div class="controls">
-                                <label>Your Password: <span class="text-error">*</span></label>
+                                <label><spring:message code="user.checkout"/>Your Password: <span class="text-error">*</span></label>
                                 <input type="password" name="" value="" placeholder="**************">
                             </div>
                             <div class="controls">
                                 <label class="checkbox">
-                                    <input type="checkbox"> Check me out
+                                    <input type="checkbox"><spring:message code="user.checkout"/> Check me out
                                 </label>
                                 <button type="submit" class="btn btn-primary">Login</button>
                             </div>

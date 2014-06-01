@@ -9,12 +9,13 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Service
 @Transactional
 public abstract class BaseEntityServiceImpl<T extends BaseEntity,
-        ID extends Long,
+        ID extends Serializable,
         T_REPOSITIRY extends IBaseEntityRepository<T, ID>> implements IBaseEntityService<T, ID, T_REPOSITIRY> {
 
     @Autowired

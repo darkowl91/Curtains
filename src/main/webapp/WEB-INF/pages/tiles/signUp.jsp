@@ -3,30 +3,22 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
-
-<spring:message code="signUp.username" var="username" />
-<spring:message code="signUp.password" var="password" />
-<spring:message code="signUp.passwordConfirm" var="passwordConfirm" />
-<spring:message code="signUp.firstName" var="firstName" />
-<spring:message code="signUp.lastName" var="lastName" />
-<spring:message code="signUp.email" var="email" />
-
 <div class="row">
 
 
 <div class="register">
 
     <div class="titleHeader clearfix">
-        <h3>Create New Account</h3>
+        <h3><spring:message code="user.signUp.create"/></h3>
     </div>
     <!--end titleHeader-->
 
     <form:form method="post" modelAttribute="newUser" cssClass="form-horizontal">
 
-        <legend>&nbsp;&nbsp;&nbsp;&nbsp;1. Personal Informations</legend>
+        <legend>&nbsp;&nbsp;&nbsp;&nbsp;<spring:message code="user.signUp.info"/></legend>
 
         <div class="control-group">
-            <label class="control-label" for="userName">Username: <span class="text-error">*</span></label>
+            <label class="control-label" for="userName"><spring:message code="user.signUp.username"/>: <span class="text-error">*</span></label>
 
             <div class="controls">
                 <form:input path="username" type="text" id="userName" placeholder="Username"/>
@@ -35,7 +27,7 @@
         </div>
 
         <div class="control-group">
-            <label class="control-label" for="email">Email: <span class="text-error">*</span></label>
+            <label class="control-label" for="email"><spring:message code="user.signUp.email"/>: <span class="text-error">*</span></label>
 
             <div class="controls">
                 <form:input path="email" type="email" id="email" placeholder="example@mail.com"/>
@@ -45,7 +37,7 @@
         <!--end control-group-->
 
         <div class="control-group">
-            <label class="control-label" for="firstName">First Name: <span class="text-error">*</span></label>
+            <label class="control-label" for="firstName"><spring:message code="user.signUp.first.name"/>: <span class="text-error">*</span></label>
 
             <div class="controls">
                 <form:input path="firstName" type="text" id="firstName" placeholder="First Name"/>
@@ -55,7 +47,7 @@
         <!--end control-group-->
 
         <div class="control-group">
-            <label class="control-label" for="lastName">Last Name: <span class="text-error">*</span></label>
+            <label class="control-label" for="lastName"><spring:message code="user.signUp.last.name"/>: <span class="text-error">*</span></label>
 
             <div class="controls">
                 <form:input path="lastName" type="text" id="lastName" placeholder="Last Name"/>
@@ -64,18 +56,18 @@
         </div>
         <!--end control-group-->
 
-        <legend>​    2. Set Your Password​</legend>​
+        <legend>​<spring:message code="user.signUp.password.info"/>​</legend>​
 
 
         <div class="control-group">
-            <label class="control-label" for="password">Password: <span class="text-error">*</span></label>
+            <label class="control-label" for="password"><spring:message code="user.signUp.password"/>: <span class="text-error">*</span></label>
             <div class="controls">
                 <form:password path="password" id="password" placeholder="**********"/>
             </div>
         </div>
 
         <div class="control-group">
-            <label class="control-label" for="passwordConfirm">Re-Type Password: <span class="text-error">*</span></label>
+            <label class="control-label" for="passwordConfirm"><spring:message code="user.signUp.password.confirm"/>: <span class="text-error">*</span></label>
             <div class="controls">
                 <form:password path="passwordConfirm"  id="passwordConfirm" placeholder="**********"/>
             </div>
@@ -86,7 +78,7 @@
             <div class="controls">
 
                 <br>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" class="btn btn-primary"><spring:message code="user.signUp.registeer"/></button>
             </div>
         </div>
         <!--end control-group-->

@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <footer>
     <div class="footerOuter">
@@ -9,7 +10,7 @@
 
                 <div class="span6">
                     <div class="titleHeader clearfix">
-                        <h3>Usefull Links</h3>
+                        <h3><spring:message code="user.footer.links"/></h3>
                     </div>
 
 
@@ -17,11 +18,15 @@
                         <div class="row-fluid">
                             <div class="span6">
                                 <ul class="unstyled">
-                                    <li><a class="invarseColor" href="<c:url value="/"/>"><i class="icon-caret-right"></i>Home</a>
+                                    <li><a class="invarseColor" href="<c:url value="/"/>"><i
+                                            class="icon-caret-right"></i><spring:message code="user.footer.links.home"/></a>
                                     </li>
-                                    <li><a class="invarseColor" href="<c:url value="/aboutUs"/>"><i class="icon-caret-right"></i>About</a></li>
-                                    <li><a class="invarseColor" href="<c:url value="/viewContacts"/>"><i class="icon-caret-right"></i>Contact</a></li>
-                                    <li><a class="invarseColor" href="<c:url value="/viewServiceList"/>"><i class="icon-caret-right"></i>Pricing</a></li>
+                                    <li><a class="invarseColor" href="<c:url value="/aboutUs"/>"><i
+                                            class="icon-caret-right"></i><spring:message code="user.footer.links.about"/></a></li>
+                                    <li><a class="invarseColor" href="<c:url value="/viewContacts"/>"><i
+                                            class="icon-caret-right"></i><spring:message code="user.footer.links.contact"/></a></li>
+                                    <li><a class="invarseColor" href="<c:url value="/viewServiceList"/>"><i
+                                            class="icon-caret-right"></i><spring:message code="user.footer.links.pricing"/></a></li>
                                 </ul>
                             </div>
 
@@ -34,7 +39,7 @@
                 </div>
                 <div class="span3">
                     <div class="titleHeader clearfix">
-                        <h3>Contact Info</h3>
+                        <h3> <spring:message code="user.footer.contact.info"/></h3>
                     </div>
 
                     <div class="contactInfo">
@@ -43,19 +48,19 @@
                                 <button class="btn btn-small">
                                     <i class="icon-volume-up"></i>
                                 </button>
-                                Call Us: <a class="invarseColor" href="#">5246-4697-891</a>
+                                <spring:message code="user.footer.contact.call"/>: <a class="invarseColor" href="#"><spring:message code="user.footer.contact.phone"/></a>
                             </li>
                             <li>
                                 <button class="btn btn-small">
                                     <i class="icon-envelope-alt"></i>
                                 </button>
-                                <a class="invarseColor" href="#">shopfine@shopfine.com</a>
+                                <a class="invarseColor" href="#"><spring:message code="user.footer.contact.email"/></a>
                             </li>
                             <li>
                                 <button class="btn btn-small">
                                     <i class="icon-map-marker"></i>
                                 </button>
-                                22 Avenue Park, Los Angeles
+                                <spring:message code="user.footer.contact.street"/>
                             </li>
                         </ul>
                     </div>
@@ -64,20 +69,21 @@
 
                 <div class="span3">
                     <div class="titleHeader clearfix">
-                        <h3>Newslatter</h3>
+                        <h3><spring:message code="user.footer.contact.newslatter"/></h3>
                     </div>
-
-                    <div class="newslatter">
-                        <form id="contact_form">
-                            <input id="name" class="input-block-level" type="text" name="name"
-                                   placeholder="Your Name..." Name="">
-                            <input id="email" class="input-block-level" type="text" name="email"
-                                   placeholder="Your E-Mail..." Name="">
-                            <input id="message" class="input-block-level" type="text" name="message"
-                                   placeholder="Message..." Name="">
-                            <button class="btn btn-block" type="submit" name="">Contact Us Now</button>
-                        </form>
-                    </div>
+                    <%--<sec:authorize access="hasRole('ROLE_USER')">--%>
+                        <div class="newslatter">
+                            <form id="contact_form">
+                                <input id="name" class="input-block-level" type="text" name="name"
+                                       placeholder="Your Name..." Name="">
+                                <input id="email" class="input-block-level" type="text" name="email"
+                                       placeholder="Your E-Mail..." Name="">
+                                <input id="message" class="input-block-level" type="text" name="message"
+                                       placeholder="Message..." Name="">
+                                <button class="btn btn-block" type="submit" name=""><spring:message code="user.contact.now"/></button>
+                            </form>
+                        </div>
+                    <%--</sec:authorize>--%>
 
                 </div>
 
@@ -95,7 +101,7 @@
                     <li class="electron"></li>
                     <li class="discover"></li>
                 </ul>
-                <p>© Copyrights 2012 for shopfine.com</p>
+                <p><spring:message code="user.footer.copyrights"/></p>
             </div>
         </div>
     </div>

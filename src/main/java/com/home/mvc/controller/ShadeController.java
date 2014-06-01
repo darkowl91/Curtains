@@ -26,13 +26,13 @@ public class ShadeController {
 
     @RequestMapping(value = "/viewServiceList", method = RequestMethod.GET)
     public String viewServiceList(ModelMap model) {
-        model.put("SERVICES", service.findAll());
+        model.put("SERVICE_LIST", service.findAll());
         return "curtains.pricing";
     }
 
     @RequestMapping(value = "/manageServices", method = RequestMethod.GET)
     public String manageServices(ModelMap model) {
-        model.put("SERVICES", service.findAll());
+        model.put("SERVICE_LIST", service.findAll());
         return "curtains.admin.service";
     }
 
