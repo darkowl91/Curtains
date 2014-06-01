@@ -11,7 +11,8 @@
 
                 <div class="pagers">
                     <div class="btn-toolbar">
-                        <button class="btn btn-mini" onclick="window.location.href='<c:url value="/viewContacts"/>'"><spring:message code="user.aboutUs.more"/></button>
+                        <button class="btn btn-mini" onclick="window.location.href='<c:url value="/aboutUs"/>'">
+                            <spring:message code="user.aboutUs.more"/></button>
                     </div>
                 </div>
             </div>

@@ -59,6 +59,7 @@
 
                 <td>
                     <button class="btn btn-small btn-danger" data-title="Remove" data-placement="top" rel="tooltip"
+                            onclick="window.location.href='<c:url value="/removeService?id=${service.id}"/>'"
                             data-original-title=""><i class="icon-trash"></i></button>
                 </td>
             </tr>

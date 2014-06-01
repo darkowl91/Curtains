@@ -26,7 +26,7 @@
     <div class="span4">
         <div id="homeSpecial">
             <div class="titleHeader clearfix">
-                <h3>News</h3>
+                <h3><spring:message code="user.info.news"/></h3>
 
                 <div class="pagers">
                     <div class="btn-toolbar">

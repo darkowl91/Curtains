@@ -9,18 +9,19 @@
         <div id="featuredItems">
             <!-- <div class="span12"> -->
             <div class="titleHeader clearfix">
-                <h3>Featured Items</h3>
+                <h3><spring:message code="user.info.items"/></h3>
 
                 <div class="pagers">
                     <div class="btn-toolbar">
-                        <button class="btn btn-mini" onclick="window.location.href='<c:url value="/viewServiceList"/>'">View All</button>
+                        <button class="btn btn-mini" onclick="window.location.href='<c:url value="/viewServiceList"/>'">
+                            <spring:message code="user.info.items.view.all"/></button>
                     </div>
                 </div>
             </div>
 
             <div class="row">
                 <ul class="hProductItems clearfix">
-                    <c:forEach var="service" items="${SERVICE_LIST}" end="6">
+                    <c:forEach var="service" items="${SERVICE_LIST}" begin="0" end="7">
                         <li class="span3 clearfix">
                             <div class="thumbnail">
                                 <a href="#"><img width="212" height="192"
