@@ -191,4 +191,13 @@
             <dropUniqueConstraint uniqueColumns="Email" constraintName="uq_email" tableName="User"/>
         </rollback>
     </changeSet>
+
+    <changeSet id="12" author="Nickolay_Petrash">
+        <sqlFile path="src/main/resources/schema/sql/install_data_2.sql"/>
+        <rollback>
+            <delete tableName="Picture"/>
+            <delete tableName="Shade"/>
+            <delete tableName="ShadeRequest"/>
+        </rollback>
+    </changeSet>
 </databaseChangeLog>
